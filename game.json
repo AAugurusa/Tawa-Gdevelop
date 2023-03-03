@@ -98,7 +98,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4802252001020739,
+        "zoomFactor": 0.21084913628624208,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -169,19 +169,24 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
+                "value": "MouseButtonPressed"
               },
               "parameters": [
-                ""
+                "Tawa1",
+                "Left"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
+                "value": "Create"
               },
               "parameters": [
+                "",
+                "Tawa1",
+                "CursorX()",
+                "CursorY()",
                 ""
               ]
             }
