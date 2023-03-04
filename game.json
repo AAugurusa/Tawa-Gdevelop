@@ -106,6 +106,51 @@
         "name": "NewSprite",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/background.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "background",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite3",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite4",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -117,8 +162,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "TawaDemo",
+      "name": "TawaDemo",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -134,7 +179,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4216982725724836,
+        "zoomFactor": 0.4038196492803312,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -150,27 +195,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 324,
-          "layer": "",
-          "name": "Tawa1",
-          "persistentUuid": "df7fec29-b665-4647-8449-199d8c3b6e43",
-          "width": 324,
-          "x": 440,
-          "y": 265,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 801,
-          "layer": "",
+          "layer": "Background",
           "name": "background",
           "persistentUuid": "e8a5d673-3b23-4d8a-ae15-a16819ca41e8",
-          "width": 1555,
-          "x": -98,
+          "width": 1397,
+          "x": -18,
           "y": -18,
           "zOrder": 2,
           "numberProperties": [],
@@ -191,6 +221,66 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 826,
+          "layer": "Background",
+          "name": "BuyerPlace",
+          "persistentUuid": "f70c9417-6e52-4bd8-afaa-6026c70498e7",
+          "width": 167,
+          "x": -24,
+          "y": -32,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 811,
+          "layer": "",
+          "name": "PlaceTowers",
+          "persistentUuid": "e4f55307-3812-498d-ab4a-a1050117829d",
+          "width": 493,
+          "x": 143,
+          "y": -19,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 811,
+          "layer": "",
+          "name": "PlaceTowers",
+          "persistentUuid": "68d237c2-4f1a-4532-846b-628de696365e",
+          "width": 612,
+          "x": 778,
+          "y": -19,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 765,
+          "layer": "",
+          "name": "Road",
+          "persistentUuid": "5c393acd-563c-4779-b16d-c7ccdf858da0",
+          "width": 108,
+          "x": 654,
+          "y": 1,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -205,16 +295,101 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "background",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\Descartables\\Fútbol-n.jpg",
+                      "image": "background",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "BuyerPlace",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "PlaceTowers",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite3",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -260,8 +435,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 52.64046446917808,
+                        "y": 52.718006617402374
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -276,17 +451,6 @@
               ]
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "road",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": []
         },
         {
           "assetStoreId": "",
@@ -347,7 +511,12 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "NewSprite",
@@ -361,6 +530,48 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 47.62708690068493,
+                        "y": 47.50203413506076
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Road",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite4",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -408,6 +619,19 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Comprar torre",
+          "comment2": ""
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -441,6 +665,19 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Bright managers\n",
+          "comment2": ""
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -495,6 +732,19 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Colocar torre",
+          "comment2": ""
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -517,11 +767,10 @@
             },
             {
               "type": {
-                "inverted": true,
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "tawa1Buyer",
+                "PlaceTowers",
                 "",
                 "",
                 ""
@@ -546,8 +795,29 @@
                 "CursorY()",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "ToggleSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isTawa1BuyerActive"
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Enemy spawner manager",
+          "comment2": ""
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -578,24 +848,142 @@
               "parameters": [
                 "",
                 "enemy1",
-                "RandomInRange(0,1360)",
-                "RandomInRange(0,768)",
+                "705",
+                "-200",
                 ""
               ]
             },
             {
               "type": {
-                "value": "ResetTimer"
+                "value": "PauseTimer"
               },
               "parameters": [
                 "",
                 "\"timerEnemy\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::AddObjectPositionYTween"
+              },
+              "parameters": [
+                "enemy1",
+                "Tween",
+                "\"EnemyMover\"",
+                "600",
+                "\"linear\"",
+                "10000",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Nos aseguramos de que la tawa no este sobre la road\n",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Tawa1",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Tawa1",
+                "Road",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Tawa1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 253,
+            "g": 222,
+            "r": 105,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Enemy succes con Js",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
+              },
+              "parameters": [
+                "enemy1",
+                "Tween",
+                "\"EnemyMover\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "enemy1",
+                ""
               ]
             }
           ]
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 11086032,
+          "ambientLightColorG": 6063568,
+          "ambientLightColorR": 10667744,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
         {
           "ambientLightColorB": 0,
           "ambientLightColorG": 8042920,
@@ -619,7 +1007,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [],
