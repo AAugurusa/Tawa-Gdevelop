@@ -129,7 +129,7 @@
         "alwaysLoaded": false,
         "file": "assets/NewSprite3.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
         "name": "NewSprite3",
         "smoothed": true,
         "userAdded": true
@@ -149,6 +149,60 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite5",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/CollisionTawa.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "CollisionTawa",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tawaArea.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "tawaArea",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tawaArea2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "tawaArea2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tawaArea3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/tawaArea3.png\"}",
+        "name": "tawaArea3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tawaArea.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tawaArea.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tawaArea4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/tawaArea4.png\"}",
+        "name": "tawaArea4",
         "smoothed": true,
         "userAdded": true
       }
@@ -591,6 +645,61 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "tawaArea",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "ColorReplace",
+              "name": "Bright",
+              "doubleParameters": {
+                "epsilon": 1
+              },
+              "stringParameters": {
+                "newColor": "255;255;255",
+                "originalColor": "189;16;224"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "tawaArea",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tawaArea4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 54.87500286102295,
+                        "y": 55.075002670288086
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -702,6 +811,15 @@
                 "\"Bright\"",
                 "no"
               ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "tawaArea",
+                ""
+              ]
             }
           ]
         },
@@ -727,6 +845,69 @@
                 "tawa1Buyer",
                 "\"Bright\"",
                 "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "tawaArea"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "No permitir hacer tawa arriba de Tawa",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "tawaArea",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isTawa1BuyerActive",
+                ""
               ]
             }
           ]
@@ -784,6 +965,18 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "tawaArea",
+                "CursorX()",
+                "CursorY()",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "Create"
@@ -970,6 +1163,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
