@@ -2071,10 +2071,10 @@
                     "value": "SendAsyncRequest"
                   },
                   "parameters": [
-                    "\"https://localhost:2606/api/users\"",
+                    "\"http://localhost:2606/api/users\"",
                     "\"{\\\"nickname\\\": \\\"\" + NickNameInput.Text() + \"\\\", \\\"password\\\": \\\"\" + PasswordInput.Text() + \"\\\" }\"",
                     "\"POST\"",
-                    "\"Json\"",
+                    "\"application/Json\"",
                     "jsonString",
                     ""
                   ]
