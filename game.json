@@ -372,7 +372,20 @@
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "nickname",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "folded": true,
+      "name": "password",
+      "type": "string",
+      "value": ""
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -1167,7 +1180,20 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "jsonString",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "folded": true,
+          "name": "jsonMsg",
+          "type": "structure",
+          "children": []
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -1863,6 +1889,265 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "SignUpButton",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "NickNameInput",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"No nickname\"",
+                    "\"error\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "NickNameInput",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "nickname",
+                    "=",
+                    "NickNameInput.Text()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "PasswordInput",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"No password\"",
+                    "\"error\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "PasswordInput",
+                    "=",
+                    "\"\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "password",
+                    "=",
+                    "PasswordInput.Text()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "NickNameInput",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextInput::TextInputObject::Text"
+                  },
+                  "parameters": [
+                    "PasswordInput",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "nickname",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "password",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"https://localhost:2606/api/users\"",
+                    "\"{\\\"nickname\\\": \\\"\" + NickNameInput.Text() + \"\\\", \\\"password\\\": \\\"\" + PasswordInput.Text() + \"\\\" }\"",
+                    "\"POST\"",
+                    "\"Json\"",
+                    "jsonString",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "nickname",
+                    "=",
+                    "NickNameInput.Text()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "password",
+                    "=",
+                    "PasswordInput.Text()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure"
+                  },
+                  "parameters": [
+                    "VariableString(jsonString)",
+                    "jsonMsg"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Success\\\"\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"Funco\"",
+                "\"info\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -1895,7 +2180,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
