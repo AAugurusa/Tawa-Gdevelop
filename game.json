@@ -432,13 +432,13 @@
       "folded": true,
       "name": "nickname",
       "type": "string",
-      "value": ""
+      "value": "\"\""
     },
     {
       "folded": true,
       "name": "password",
       "type": "string",
-      "value": ""
+      "value": "\"\""
     },
     {
       "folded": true,
@@ -468,7 +468,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4928840415360302,
+        "zoomFactor": 0.49288404153603016,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -575,6 +575,36 @@
           "x": -94,
           "y": -53,
           "zOrder": 200,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Errors",
+          "name": "ErrorText",
+          "persistentUuid": "da7b3431-f5f5-4015-b2ea-f7aab189bf7d",
+          "width": 0,
+          "x": 393,
+          "y": 234,
+          "zOrder": 201,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 310,
+          "layer": "",
+          "name": "NewText",
+          "persistentUuid": "a66165ab-c378-4c18-9eed-48c1902cd112",
+          "width": 245,
+          "x": 1092,
+          "y": 145,
+          "zOrder": 202,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -858,6 +888,50 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ErrorText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Nickname or password incorrect",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -1005,6 +1079,16 @@
               "parameters": [
                 "Fade",
                 "\"Fade\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "NewText",
+                "=",
+                "GlobalVariableString(nickname)"
               ]
             }
           ]
@@ -1350,9 +1434,9 @@
                     "value": "SendAsyncRequest"
                   },
                   "parameters": [
-                    "\"http://localhost:2606/api/users/\" + NickNameInput.Text() +  \"/login\"",
+                    "\"http://localhost:2606/api/users/login\"",
                     "\"{\\\"nickname\\\": \\\"\" + NickNameInput.Text() + \"\\\", \\\"password\\\": \\\"\" + PasswordInput.Text() + \"\\\" }\"",
-                    "\"GET\"",
+                    "\"POST\"",
                     "\"application/Json\"",
                     "jsonString",
                     ""
@@ -1390,6 +1474,128 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Success\\\"\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Nickname or password incorrect\\\"\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ErrorText",
+                "=",
+                "VariableString(jsonString)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"Errors\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "NickNameInput",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "PasswordInput",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "NewText",
+                "=",
+                "GlobalVariableString(nickname)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -1422,7 +1628,29 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 9982960,
+          "ambientLightColorG": 6063568,
+          "ambientLightColorR": 12952680,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Errors",
           "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 12770320,
+          "ambientLightColorG": 6063568,
+          "ambientLightColorR": 12949872,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Testing",
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
@@ -1574,6 +1802,21 @@
           "x": -99,
           "y": -55,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Errors",
+          "name": "ErrorText",
+          "persistentUuid": "27827d78-e622-42f5-a3db-358bfe30ba44",
+          "width": 0,
+          "x": 451,
+          "y": 246,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1856,6 +2099,28 @@
               "topMargin": 10,
               "width": 192
             }
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ErrorText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Nickname already in use",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 50,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
           }
         }
       ],
@@ -2407,22 +2672,86 @@
           "actions": [
             {
               "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "\"Funco\"",
-                "\"info\"",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "Scene"
               },
               "parameters": [
                 "",
                 "\"LogIn\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Nickname already in use\\\"\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ErrorText",
+                "=",
+                "VariableString(jsonString)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"Errors\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "NickNameInput",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextInput::TextInputObject::SetText"
+              },
+              "parameters": [
+                "PasswordInput",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\""
               ]
             }
           ]
@@ -2458,7 +2787,18 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
-          "visibility": true,
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 11915520,
+          "ambientLightColorG": 6063568,
+          "ambientLightColorR": 12986952,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Errors",
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
@@ -2634,6 +2974,21 @@
           "x": 550,
           "y": 637,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 244,
+          "layer": "Testing",
+          "name": "NewText",
+          "persistentUuid": "8da87089-3f88-4c31-bd95-e68118a92ade",
+          "width": 320,
+          "x": 991,
+          "y": 164,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3112,6 +3467,28 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -3163,6 +3540,16 @@
               "parameters": [
                 "Fade",
                 "\"Fade\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "NewText",
+                "=",
+                "GlobalVariableString(nickname)"
               ]
             }
           ]
@@ -3372,6 +3759,58 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "LogOutButton",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -3417,6 +3856,22 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "NewText",
+                "=",
+                "GlobalVariableString(nickname)"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -3449,6 +3904,17 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 11380496,
+          "ambientLightColorG": 6063568,
+          "ambientLightColorR": 12962168,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Testing",
           "visibility": false,
           "cameras": [],
           "effects": []
