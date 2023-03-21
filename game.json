@@ -41,7 +41,7 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": true,
+      "showGDevelopSplash": false,
       "showProgressBar": true
     },
     "watermark": {
@@ -468,7 +468,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.49288404153603016,
+        "zoomFactor": 0.4144644236634108,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1639,7 +1639,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Errors",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         },
@@ -2670,6 +2670,26 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
