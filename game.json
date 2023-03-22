@@ -1639,7 +1639,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Errors",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         },
@@ -1698,6 +1698,18 @@
           "name": "jsonMsg",
           "type": "structure",
           "children": []
+        },
+        {
+          "folded": true,
+          "name": "nickname",
+          "type": "string",
+          "value": "\"\""
+        },
+        {
+          "folded": true,
+          "name": "ERROR",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -2611,19 +2623,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SendAsyncRequest"
-                  },
-                  "parameters": [
-                    "\"http://localhost:2606/api/users/signUp\"",
-                    "\"{\\\"nickname\\\": \\\"\" + NickNameInput.Text() + \"\\\", \\\"password\\\": \\\"\" + PasswordInput.Text() + \"\\\" }\"",
-                    "\"POST\"",
-                    "\"application/Json\"",
-                    "jsonString",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "ModVarGlobalTxt"
                   },
                   "parameters": [
@@ -2640,6 +2639,19 @@
                     "password",
                     "=",
                     "PasswordInput.Text()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"http://localhost:2606/api/users/signUp\"",
+                    "\"{\\\"nickname\\\": \\\"\" + NickNameInput.Text() + \"\\\", \\\"password\\\": \\\"\" + PasswordInput.Text() + \"\\\" }\"",
+                    "\"POST\"",
+                    "\"application/Json\"",
+                    "jsonString",
+                    ""
                   ]
                 },
                 {
@@ -2667,9 +2679,28 @@
                 "=",
                 "\"\\\"Success\\\"\""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/stats/signup\"",
+                " \"{\\\"nickname\\\": \\\"\" + GlobalVariableString(nickname) + \"\\\"}\" \n",
+                "\"POST\"",
+                "\"application/json\"",
+                "jsonString",
+                "ERROR"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
@@ -2755,6 +2786,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
