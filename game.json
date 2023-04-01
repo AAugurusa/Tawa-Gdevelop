@@ -5531,7 +5531,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5095042541079126,
+        "zoomFactor": 0.5628037561598633,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5550,6 +5550,12 @@
           "name": "Hp",
           "type": "number",
           "value": 248
+        },
+        {
+          "folded": true,
+          "name": "Num_Coins",
+          "type": "number",
+          "value": 30
         },
         {
           "folded": true,
@@ -7095,7 +7101,21 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Glow",
+              "doubleParameters": {
+                "distance": 10,
+                "innerStrength": 0,
+                "outerStrength": 3
+              },
+              "stringParameters": {
+                "color": "248;231;28"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -7307,10 +7327,10 @@
           "effects": [],
           "behaviors": [
             {
-              "cost": 2,
-              "impassable": true,
               "name": "PathfindingObstacle",
-              "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+              "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+              "cost": 2,
+              "impassable": true
             }
           ],
           "animations": [
@@ -7623,10 +7643,10 @@
           "effects": [],
           "behaviors": [
             {
-              "cost": 2,
-              "impassable": true,
               "name": "PathfindingObstacle",
-              "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+              "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+              "cost": 2,
+              "impassable": true
             }
           ],
           "animations": [
@@ -7671,6 +7691,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
               "allowDiagonals": false,
               "angleOffset": 0,
@@ -7681,10 +7703,8 @@
               "gridOffsetX": 5,
               "gridOffsetY": 5,
               "maxSpeed": 150,
-              "name": "Pathfinding",
               "rotateObject": true,
-              "smoothingMaxCellGap": 1,
-              "type": "PathfindingBehavior::PathfindingBehavior"
+              "smoothingMaxCellGap": 1
             }
           ],
           "animations": [
@@ -8724,6 +8744,47 @@
           "parameters": []
         },
         {
+          "colorB": 33,
+          "colorG": 211,
+          "colorR": 126,
+          "creationTime": 0,
+          "name": "Money manager",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ajusting constantly the money of the player in the scene",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "NumberOfCoins",
+                    "=",
+                    "ToString(Variable(Num_Coins))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 138,
           "colorG": 136,
           "colorR": 134,
@@ -8839,6 +8900,32 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "c"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Num_Coins",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
               "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
@@ -8936,7 +9023,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6426421658135443,
+        "zoomFactor": 0.5444448946033376,
         "windowMask": false
       },
       "objectsGroups": [],
