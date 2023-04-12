@@ -844,6 +844,69 @@
         "name": "assets\\NewSprite12 - copia (3).png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite16",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_NewSprite.png3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/assets_NewSprite.png3.png\"}",
+        "name": "assets\\NewSprite.png3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_NewSprite.png4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\NewSprite.png4",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_NewSprite.png4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\assets_NewSprite.png4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_NewSprite.png3.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/assets_NewSprite.png3.png\",\"extension\":\".png\"}",
+        "name": "assets\\assets_NewSprite.png3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Og.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Og",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -5711,7 +5774,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5266849057337175,
+        "zoomFactor": 0.5444448946033386,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5750,6 +5813,18 @@
         },
         {
           "folded": true,
+          "name": "actualRound",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "nextRound",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
           "name": "Num_Coins",
           "type": "number",
           "value": 30
@@ -5767,6 +5842,7 @@
           "value": false
         },
         {
+          "folded": true,
           "name": "Buyers",
           "type": "structure",
           "children": [
@@ -5798,6 +5874,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "dragAndDrop",
           "type": "structure",
           "children": [
@@ -5830,6 +5907,12 @@
               "value": false
             }
           ]
+        },
+        {
+          "folded": true,
+          "name": "numOfEnemysSpawnedInThisRound",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -7242,21 +7325,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 64,
-          "layer": "",
-          "name": "enemie",
-          "persistentUuid": "89dcb768-e5b7-4e87-981b-3d761e9f6df9",
-          "width": 64,
-          "x": 279,
-          "y": 155,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "layer": "",
@@ -7358,6 +7426,21 @@
           "x": 116,
           "y": 553,
           "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 10,
+          "layer": "",
+          "name": "EnemySpawner",
+          "persistentUuid": "3be4878b-774c-4586-b307-f5fc7cd476b6",
+          "width": 10,
+          "x": 306,
+          "y": 157,
+          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8126,7 +8209,26 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "folded": true,
+              "name": "currentHealth",
+              "type": "number",
+              "value": 35
+            },
+            {
+              "folded": true,
+              "name": "maxSpeed",
+              "type": "number",
+              "value": 150
+            },
+            {
+              "folded": true,
+              "name": "aceleration",
+              "type": "number",
+              "value": 400
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -8148,7 +8250,48 @@
           ],
           "animations": [
             {
-              "name": "assets\\NewSprite.png",
+              "name": "Og",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
+                }
+              ]
+            },
+            {
+              "name": "1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\assets_NewSprite.png4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -8158,12 +8301,42 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\NewSprite.png2",
+                      "image": "2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 52.5,
-                        "y": 52.5
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\assets_NewSprite.png3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9124,6 +9297,78 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "EnemySpawner",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ObjectSpawner",
+              "type": "ObjectSpawner::ObjectSpawner",
+              "SpawnPeriod": 2,
+              "OffsetX": 0,
+              "OffsetY": 0,
+              "JustSpawnedAnObject": false,
+              "MaxQuantityReached": false,
+              "MaxQuantity": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite16",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20,
+                            "y": 20
+                          },
+                          {
+                            "x": 45,
+                            "y": 20
+                          },
+                          {
+                            "x": 45,
+                            "y": 45
+                          },
+                          {
+                            "x": 20,
+                            "y": 45
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -10064,6 +10309,385 @@
           "parameters": []
         },
         {
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Enemy spawnerd",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    "=",
+                    "Variable(nextRound)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SetMaxQuantity"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "Variable(actualRound)*4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SetSpawnPeriod"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "5/Variable(actualRound)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Phase:\" + ToString(Variable(actualRound))",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "<",
+                    "Variable(actualRound)*4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "enemie",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::ObjectWasJustSpawned"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Spawned:\" + ToString(Variable(numOfEnemysSpawnedInThisRound))",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "function randomNumber(min, max) { ",
+                    "    return Math.random() * (max - min) + min;",
+                    "};",
+                    "",
+                    "var lenght = objects.length - 1",
+                    "var lastEnemy = objects[lenght]",
+                    "",
+                    "lastEnemy.setAnimation(randomNumber(1,4))",
+                    ""
+                  ],
+                  "parameterObjects": "enemie",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "400"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "150"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "150"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "450"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "200"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "100"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "500"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "250"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "75"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "=",
+                    "Variable(actualRound)*4"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Got to max amount of enemys!\"",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 33,
           "colorG": 211,
           "colorR": 126,
@@ -10704,6 +11328,7 @@
           "colorG": 95,
           "colorR": 39,
           "creationTime": 0,
+          "folded": true,
           "name": "Drag and drop",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13710,6 +14335,7 @@
           "colorG": 255,
           "colorR": 255,
           "creationTime": 0,
+          "folded": true,
           "name": "Tower Manager",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -15302,7 +15928,6 @@
           "colorG": 136,
           "colorR": 134,
           "creationTime": 0,
-          "disabled": true,
           "folded": true,
           "name": "Enemy path manager",
           "source": "",
@@ -15317,7 +15942,7 @@
                     "value": "PathfindingBehavior::SetDestination"
                   },
                   "parameters": [
-                    "enemie",
+                    "Enemys",
                     "Pathfinding",
                     "",
                     "EndReachObject.X()",
@@ -15347,7 +15972,7 @@
                     "value": "CollisionPoint"
                   },
                   "parameters": [
-                    "enemie",
+                    "Enemys",
                     "EndReachObject.PointX(\"EnemyDeleter\")",
                     "EndReachObject.PointY(\"EnemyDeleter\")"
                   ]
@@ -15369,7 +15994,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "enemie",
+                    "Enemys",
                     ""
                   ]
                 }
@@ -15508,6 +16133,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "ObjectSpawner",
+          "type": "ObjectSpawner::ObjectSpawner"
+        },
         {
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior"
@@ -19061,6 +19690,1081 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "Game mechanic",
+      "extensionNamespace": "",
+      "fullName": "Object spawner",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXBsdXMtb25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLDhWMTJIMTRWMTRIMTBWMThIOFYxNEg0VjEySDhWOEgxME0xNC41LDYuMDhMMTksNVYxOEgxN1Y3LjRMMTQuNSw3LjlWNi4wOFoiIC8+PC9zdmc+",
+      "name": "ObjectSpawner",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/plus-one.svg",
+      "shortDescription": "Spawn (create) objects periodically.",
+      "version": "0.4.2",
+      "description": [
+        "Spawn objects periodically and control their number.",
+        "",
+        "It can be used to create:",
+        "- Enemies",
+        "- NPCs",
+        "- Environmental objects",
+        ""
+      ],
+      "origin": {
+        "identifier": "ObjectSpawner",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "spawn",
+        "spawner",
+        "objects",
+        "create",
+        "timer"
+      ],
+      "authorIds": [
+        "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Spawn (create) objects periodically.",
+          "fullName": "Object spawner",
+          "name": "ObjectSpawner",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Spawn (create) objects periodically. This action must be run every frame to work. When the max quantity is reached and an instance is deleted, the spawner waits the duration of the spawn period before creating another instance. Spawned objects are automatically linked to the spawner.",
+              "fullName": "Spawn objects periodically",
+              "functionType": "Action",
+              "name": "SpawnObject",
+              "sentence": "Periodically spawn (create) a _PARAM2_ located at spawner _PARAM0_ ",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Max quantity check",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Always spawn objects if quantity is set to \"0\"",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SetPropertyMaxQuantityReached"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Check if max number of instances per spawner has been reached",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::PropertyMaxQuantity"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "!=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::PickObjectsLinkedTo"
+                          },
+                          "parameters": [
+                            "",
+                            "ObjectToSpawn",
+                            "Object",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "This is used so that objects are not immediately spawned after deleting an instance after max instances had been reached",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Egal"
+                              },
+                              "parameters": [
+                                "Count(ObjectToSpawn)",
+                                "<",
+                                "Object.Behavior::PropertyMaxQuantity()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "Object",
+                                "\"__ObjectSpawner.SpawnTimer\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Check if max number of instances per spawner has been reached",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Egal"
+                              },
+                              "parameters": [
+                                "Count(ObjectToSpawn)",
+                                ">=",
+                                "Object.Behavior::PropertyMaxQuantity()"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ObjectSpawner::ObjectSpawner::SetPropertyMaxQuantityReached"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Behavior",
+                                "yes"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Spawning",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Reset spawn detection",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SetPropertyJustSpawnedAnObject"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "no"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Spawn an object when conditions are met",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "\"__ObjectSpawner.SpawnTimer\"",
+                            ">",
+                            "Object.Behavior::PropertySpawnPeriod()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "ObjectSpawner::ObjectSpawner::PropertyMaxQuantityReached"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "\"__ObjectSpawner.SpawnTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "ObjectToSpawn",
+                            "Object.X()+Object.Behavior::PropertyOffsetX()",
+                            "Object.Y()+Object.Behavior::PropertyOffsetY()",
+                            "Object.Layer()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectSpawner::ObjectSpawner::SetPropertyJustSpawnedAnObject"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "yes"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "ObjectToSpawn",
+                            "Object"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Note: Spawned objects are linked to the spawner to check their number per spawner",
+                          "comment2": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object that will be created",
+                  "name": "ObjectToSpawn",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__ObjectSpawner.SpawnTimer\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the offset X relative to origin of spawner (in pixels).",
+              "fullName": "Offset on X axis",
+              "functionType": "Action",
+              "name": "SetOffsetX",
+              "sentence": "Change the offset X of _PARAM0_ to _PARAM2_ pixels",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SetPropertyOffsetX"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the offset Y relative to origin of spawner (in pixels).",
+              "fullName": "Offset on Y axis",
+              "functionType": "Action",
+              "name": "SetOffsetY",
+              "sentence": "Change the offset Y of _PARAM0_ to _PARAM2_ pixels",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SetPropertyOffsetY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the maximum number of living objects a spawner can create. Set it to 0 to never stop spawning objects.",
+              "fullName": "Maximum quantity",
+              "functionType": "Action",
+              "name": "SetMaxQuantity",
+              "sentence": "Change the maximum quantity of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SetPropertyMaxQuantity"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the spawn period (in seconds).",
+              "fullName": "Spawn period",
+              "functionType": "Action",
+              "name": "SetSpawnPeriod",
+              "sentence": "Change the spawn period of _PARAM0_ to _PARAM2_ seconds",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::SetPropertySpawnPeriod"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the offset X relative to origin of spawner (in pixels).",
+              "fullName": "Offset X",
+              "functionType": "Expression",
+              "name": "OffsetX",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyOffsetX()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the offset Y relative to origin of spawner (in pixels).",
+              "fullName": "Offset Y",
+              "functionType": "Expression",
+              "name": "OffsetY",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyOffsetY()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the maximum number of living objects a spawner can create.",
+              "fullName": "Maximum quantity",
+              "functionType": "Expression",
+              "name": "MaxQuantity",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyMaxQuantity()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the spawn period (in seconds).",
+              "fullName": "Spawn period",
+              "functionType": "Expression",
+              "name": "SpawnPeriod",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertySpawnPeriod()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDeActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__ObjectSpawner.SpawnTimer\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "UnPauseObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__ObjectSpawner.SpawnTimer\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Restart the cool down of a spawner.",
+              "fullName": "Restart cool down",
+              "functionType": "Action",
+              "name": "ResetSpawnTimer",
+              "sentence": "Restart the cool down of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__ObjectSpawner.SpawnTimer\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the remaining time before the next spawn (in seconds). Useful for triggering visual and sound effects.",
+              "fullName": "Time before spawn",
+              "functionType": "Expression",
+              "name": "TimeBeforeSpawn",
+              "sentence": "_PARAM0_ just spawned an object",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::PropertyMaxQuantityReached"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertySpawnPeriod()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "ObjectSpawner::ObjectSpawner::PropertyMaxQuantityReached"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertySpawnPeriod() - Object.ObjectTimerElapsedTime(\"__ObjectSpawner.SpawnTimer\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if an object has just been created by this spawner. Useful for triggering visual and sound effects.",
+              "fullName": "Spawned object ",
+              "functionType": "Condition",
+              "name": "ObjectWasJustSpawned",
+              "sentence": "_PARAM0_ just spawned an object",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectSpawner::ObjectSpawner::PropertyJustSpawnedAnObject"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectSpawner::ObjectSpawner",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "1",
+              "type": "Number",
+              "unit": "Second",
+              "label": "Spawn period",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "SpawnPeriod"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Offset X (relative to position of spawner)",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "OffsetX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Offset Y (relative to position of spawner)",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "OffsetY"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "JustSpawnedAnObject"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "MaxQuantityReached"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Max quantity (per spawner)",
+              "description": "Set it to 0 to never stop spawning objects.",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "MaxQuantity"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
     {
       "author": "",
       "category": "Movement",
