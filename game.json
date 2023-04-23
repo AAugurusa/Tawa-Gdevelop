@@ -907,6 +907,141 @@
         "name": "2",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite17.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite17",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite18.png\"}",
+        "name": "NewSprite18",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/upgrade2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "upgrade",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/upgrade22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "upgrade2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite12.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite18 - copia.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/NewSprite18 - copia.png\",\"extension\":\".png\"}",
+        "name": "assets\\NewSprite18 - copia.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal3",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal4",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal5",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite18 - copia (2).png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/NewSprite18 - copia (2).png\",\"extension\":\".png\"}",
+        "name": "assets\\NewSprite18 - copia (2).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/upgrade22 - copia.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/upgrade22 - copia.png\",\"extension\":\".png\"}",
+        "name": "assets\\upgrade22 - copia.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite18 - copia (2) - copia.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/NewSprite18 - copia (2) - copia.png\",\"extension\":\".png\"}",
+        "name": "assets\\NewSprite18 - copia (2) - copia.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/upgrade2 - copia.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/upgrade2 - copia.png\",\"extension\":\".png\"}",
+        "name": "assets\\upgrade2 - copia.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4484,1005 +4619,6 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "TawaDemo",
-      "name": "TawaDemo",
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridColor": 10401023,
-        "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.4038196492803312,
-        "windowMask": false
-      },
-      "objectsGroups": [],
-      "variables": [
-        {
-          "folded": true,
-          "name": "isTawa1BuyerActive",
-          "type": "boolean",
-          "value": false
-        }
-      ],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 801,
-          "layer": "Background",
-          "name": "background",
-          "persistentUuid": "e8a5d673-3b23-4d8a-ae15-a16819ca41e8",
-          "width": 1397,
-          "x": -18,
-          "y": -18,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "tawa1Buyer",
-          "persistentUuid": "a7b153a6-60e5-41e1-b8d7-9414e25925dd",
-          "width": 0,
-          "x": 10,
-          "y": 134,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 826,
-          "layer": "Background",
-          "name": "BuyerPlace",
-          "persistentUuid": "f70c9417-6e52-4bd8-afaa-6026c70498e7",
-          "width": 167,
-          "x": -24,
-          "y": -32,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 811,
-          "layer": "",
-          "name": "PlaceTowers",
-          "persistentUuid": "e4f55307-3812-498d-ab4a-a1050117829d",
-          "width": 493,
-          "x": 143,
-          "y": -19,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 811,
-          "layer": "",
-          "name": "PlaceTowers",
-          "persistentUuid": "68d237c2-4f1a-4532-846b-628de696365e",
-          "width": 612,
-          "x": 778,
-          "y": -19,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 765,
-          "layer": "",
-          "name": "Road",
-          "persistentUuid": "5c393acd-563c-4779-b16d-c7ccdf858da0",
-          "width": 108,
-          "x": 654,
-          "y": 1,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "assetStoreId": "",
-          "name": "background",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "background",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "background",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "BuyerPlace",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "NewSprite2",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "PlaceTowers",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "NewSprite3",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Tawa1",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Tawa1",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Tawa1",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 52.64046446917808,
-                        "y": 52.718006617402374
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "tawa1Buyer",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [
-            {
-              "effectType": "Brightness",
-              "name": "Bright",
-              "doubleParameters": {
-                "brightness": 0.3
-              },
-              "stringParameters": {},
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets\\Tawa1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "enemy1",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Tween",
-              "type": "Tween::TweenBehavior"
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "NewSprite",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 47.62708690068493,
-                        "y": 47.50203413506076
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Road",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "NewSprite4",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "tawaArea",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [
-            {
-              "effectType": "ColorReplace",
-              "name": "Bright",
-              "doubleParameters": {
-                "epsilon": 1
-              },
-              "stringParameters": {
-                "newColor": "255;255;255",
-                "originalColor": "189;16;224"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "tawaArea",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "tawaArea4",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 54.87500286102295,
-                        "y": 55.075002670288086
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"timerEnemy\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Comprar torre",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "tawa1Buyer",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ToggleSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Bright managers\n",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "tawa1Buyer",
-                "\"Bright\"",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "tawaArea",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive",
-                "\"Bright\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "tawa1Buyer",
-                "\"Bright\"",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "tawaArea"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "No permitir hacer tawa arriba de Tawa",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "tawaArea",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Colocar torre",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive",
-                "True"
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonPressed"
-              },
-              "parameters": [
-                "Tawa1",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "PlaceTowers",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "tawaArea",
-                "CursorX()",
-                "CursorY()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Tawa1",
-                "CursorX()",
-                "CursorY()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ToggleSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isTawa1BuyerActive"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Enemy spawner manager",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"timerEnemy\"",
-                ">=",
-                "5"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "enemy1",
-                "705",
-                "-200",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseTimer"
-              },
-              "parameters": [
-                "",
-                "\"timerEnemy\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::AddObjectPositionYTween"
-              },
-              "parameters": [
-                "enemy1",
-                "Tween",
-                "\"EnemyMover\"",
-                "600",
-                "\"linear\"",
-                "10000",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Nos aseguramos de que la tawa no este sobre la road\n",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "Tawa1",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Tawa1",
-                "Road",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Tawa1",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 253,
-            "g": 222,
-            "r": 105,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Enemy succes con Js",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Tween::HasFinished"
-              },
-              "parameters": [
-                "enemy1",
-                "Tween",
-                "\"EnemyMover\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "enemy1",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 11086032,
-          "ambientLightColorG": 6063568,
-          "ambientLightColorR": 10667744,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "Background",
-          "visibility": true,
-          "cameras": [],
-          "effects": []
-        },
-        {
-          "ambientLightColorB": 0,
-          "ambientLightColorG": 8042920,
-          "ambientLightColorR": 16,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
       "mangledName": "Leaderboards",
       "name": "Leaderboards",
       "r": 209,
@@ -5802,6 +4938,23 @@
               "name": "AteneaTower"
             }
           ]
+        },
+        {
+          "name": "Bullets",
+          "objects": [
+            {
+              "name": "aresBullet"
+            },
+            {
+              "name": "poseidonBullet"
+            },
+            {
+              "name": "zeusBullet"
+            },
+            {
+              "name": "ateneaBullet"
+            }
+          ]
         }
       ],
       "variables": [
@@ -5953,7 +5106,7 @@
           "layer": "",
           "name": "NumberOfCoins",
           "persistentUuid": "db07ea38-e41c-4cfc-95f4-2f6c8fe654dc",
-          "width": 64,
+          "width": 135,
           "x": 83,
           "y": 108,
           "zOrder": 3,
@@ -8214,19 +7367,82 @@
               "folded": true,
               "name": "currentHealth",
               "type": "number",
-              "value": 35
+              "value": 100
             },
             {
               "folded": true,
-              "name": "maxSpeed",
-              "type": "number",
-              "value": 150
+              "name": "normalStats1",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "acelerationNormal",
+                  "type": "number",
+                  "value": 300
+                },
+                {
+                  "folded": true,
+                  "name": "maxSpeedNormal",
+                  "type": "number",
+                  "value": 150
+                },
+                {
+                  "folded": true,
+                  "name": "normalHealth",
+                  "type": "number",
+                  "value": 75
+                }
+              ]
             },
             {
               "folded": true,
-              "name": "aceleration",
-              "type": "number",
-              "value": 400
+              "name": "brutusStats2",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "acelerationBrutus",
+                  "type": "number",
+                  "value": 200
+                },
+                {
+                  "folded": true,
+                  "name": "brutusHealth",
+                  "type": "number",
+                  "value": 150
+                },
+                {
+                  "folded": true,
+                  "name": "maxSpeedBrutus",
+                  "type": "number",
+                  "value": 65
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "assasinStats3",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "acelerationAssasin",
+                  "type": "number",
+                  "value": 500
+                },
+                {
+                  "folded": true,
+                  "name": "assasinHealth",
+                  "type": "number",
+                  "value": 50
+                },
+                {
+                  "folded": true,
+                  "name": "maxSpeedAssasin",
+                  "type": "number",
+                  "value": 200
+                }
+              ]
             }
           ],
           "effects": [],
@@ -8272,7 +7488,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\assets_NewSprite.png4.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 65,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 32,
@@ -8302,7 +7524,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 65,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 32,
@@ -8332,7 +7560,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\assets_NewSprite.png3.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 65,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 32,
@@ -8594,10 +7828,53 @@
               "name": "isUpgraded",
               "type": "boolean",
               "value": false
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedNormal",
+              "type": "number",
+              "value": 500
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedUpgrade",
+              "type": "number",
+              "value": 550
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.2,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 0,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            }
+          ],
           "animations": [
             {
               "name": "Normal",
@@ -8611,7 +7888,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\Tawa2.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -8641,7 +7924,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\upgradeares.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -8786,10 +8075,53 @@
               "name": "isUpgraded",
               "type": "boolean",
               "value": false
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedNormal",
+              "type": "number",
+              "value": 300
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedUpgrade",
+              "type": "number",
+              "value": 350
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 1,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 0,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            }
+          ],
           "animations": [
             {
               "name": "Normal",
@@ -8803,7 +8135,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "NewSprite13",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -8833,7 +8171,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\upgradeNewSprite.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -8987,10 +8331,53 @@
               "name": "isUpgraded",
               "type": "boolean",
               "value": false
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedUpgrade",
+              "type": "number",
+              "value": 550
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedNormal",
+              "type": "number",
+              "value": 500
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.2,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 3,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            }
+          ],
           "animations": [
             {
               "name": "Normal",
@@ -9004,7 +8391,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\Poseidon.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -9034,7 +8427,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Upgrade",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -9170,10 +8569,53 @@
               "name": "isUpgraded",
               "type": "boolean",
               "value": false
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedNormal",
+              "type": "number",
+              "value": 500
+            },
+            {
+              "folded": true,
+              "name": "bulletSpeedUpgrade",
+              "type": "number",
+              "value": 550
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            }
+          ],
           "animations": [
             {
               "name": "Normal",
@@ -9187,7 +8629,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\Tawa2 - copia.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -9217,7 +8665,13 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\Upgrade - copia.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "bulletPoint",
+                          "x": 64,
+                          "y": 32
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -9363,6 +8817,363 @@
                           }
                         ]
                       ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "aresBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "damage",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "normal",
+                  "type": "number",
+                  "value": 10
+                },
+                {
+                  "name": "upgraded",
+                  "type": "number",
+                  "value": 15
+                }
+              ]
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite18",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12.5,
+                        "y": 12.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "upgrade",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "upgrade",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "ateneaBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "damage",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "normal",
+                  "type": "number",
+                  "value": 10
+                },
+                {
+                  "name": "upgraded",
+                  "type": "number",
+                  "value": 15
+                }
+              ]
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\NewSprite18 - copia (2) - copia.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 12.5,
+                        "y": 12.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "upgrade",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\upgrade2 - copia.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "zeusBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "damage",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "normal",
+                  "type": "number",
+                  "value": 10
+                },
+                {
+                  "name": "upgraded",
+                  "type": "number",
+                  "value": 15
+                }
+              ]
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\NewSprite18 - copia.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "upgrade",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "upgrade2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "poseidonBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "folded": true,
+              "name": "damage",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "normal",
+                  "type": "number",
+                  "value": 10
+                },
+                {
+                  "name": "upgraded",
+                  "type": "number",
+                  "value": 15
+                }
+              ]
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\NewSprite18 - copia (2).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "upgrade",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\upgrade22 - copia.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
                     }
                   ]
                 }
@@ -10422,7 +10233,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -10507,7 +10317,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "400"
+                        "enemie.Variable(normalStats1.acelerationNormal)"
                       ]
                     },
                     {
@@ -10518,7 +10328,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "150"
+                        "enemie.Variable(normalStats1.maxSpeedNormal)"
                       ]
                     },
                     {
@@ -10529,7 +10339,7 @@
                         "enemie",
                         "currentHealth",
                         "=",
-                        "150"
+                        "enemie.Variable(normalStats1.normalHealth)"
                       ]
                     }
                   ]
@@ -10557,7 +10367,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "450"
+                        "enemie.Variable(brutusStats2.acelerationBrutus)"
                       ]
                     },
                     {
@@ -10568,7 +10378,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "200"
+                        "enemie.Variable(brutusStats2.maxSpeedBrutus)"
                       ]
                     },
                     {
@@ -10579,7 +10389,7 @@
                         "enemie",
                         "currentHealth",
                         "=",
-                        "100"
+                        "enemie.Variable(brutusStats2.brutusHealth)"
                       ]
                     }
                   ]
@@ -10607,7 +10417,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "500"
+                        "enemie.Variable(assasinStats3.acelerationAssasin)"
                       ]
                     },
                     {
@@ -10618,7 +10428,7 @@
                         "enemie",
                         "Pathfinding",
                         "=",
-                        "250"
+                        "enemie.Variable(assasinStats3.maxSpeedAssasin)"
                       ]
                     },
                     {
@@ -10629,7 +10439,7 @@
                         "enemie",
                         "currentHealth",
                         "=",
-                        "75"
+                        "enemie.Variable(assasinStats3.assasinHealth)"
                       ]
                     }
                   ]
@@ -10678,11 +10488,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ],
           "parameters": []
@@ -10725,11 +10530,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ],
           "parameters": []
@@ -14038,6 +13838,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -14345,6 +14146,7 @@
               "colorG": 231,
               "colorR": 248,
               "creationTime": 0,
+              "folded": true,
               "name": "Zeus",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15335,6 +15137,7 @@
               "colorG": 211,
               "colorR": 126,
               "creationTime": 0,
+              "folded": true,
               "name": "Atenea",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15660,6 +15463,1328 @@
                 }
               ],
               "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Tower shooter",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ares shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AresTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "AresTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "AresTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "FireBullet",
+                        "AresTower.PointX(\"bulletPoint\")",
+                        "AresTower.PointY(\"bulletPoint\")",
+                        "aresBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AresTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "FireBullet",
+                        "AresTower.PointX(\"bulletPoint\")",
+                        "AresTower.PointY(\"bulletPoint\")",
+                        "aresBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AresTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 28,
+                "g": 231,
+                "r": 248,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Zeus shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ZeusTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "ZeusTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "ZeusTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "FireBullet",
+                        "ZeusTower.PointX(\"bulletPoint\")",
+                        "ZeusTower.PointY(\"bulletPoint\")",
+                        "zeusBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "ZeusTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "FireBullet",
+                        "ZeusTower.PointX(\"bulletPoint\")",
+                        "ZeusTower.PointY(\"bulletPoint\")",
+                        "zeusBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "ZeusTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 243,
+                "g": 127,
+                "r": 4,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Posiedon shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "PoseidonTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "PoseidonTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "PoseidonTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "FireBullet",
+                        "PoseidonTower.PointX(\"bulletPoint\")",
+                        "PoseidonTower.PointY(\"bulletPoint\")",
+                        "poseidonBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "PoseidonTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "FireBullet",
+                        "PoseidonTower.PointX(\"bulletPoint\")",
+                        "PoseidonTower.PointY(\"bulletPoint\")",
+                        "poseidonBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "PoseidonTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 33,
+                "g": 211,
+                "r": 126,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Atenea shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AteneaTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "AteneaTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "AteneaTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "FireBullet",
+                        "AteneaTower.PointX(\"bulletPoint\")",
+                        "AteneaTower.PointY(\"bulletPoint\")",
+                        "ateneaBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AteneaTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "FireBullet",
+                        "AteneaTower.PointX(\"bulletPoint\")",
+                        "AteneaTower.PointY(\"bulletPoint\")",
+                        "ateneaBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AteneaTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Damage dealer",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Wall hit = delete bullet = no flying arround ;)",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Bullets",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "BannerItems",
+                    "Bullets.X()",
+                    "Bullets.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullets",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ares bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "aresBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "aresBullet.X()",
+                    "aresBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "aresBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "aresBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 28,
+                "g": 231,
+                "r": 248,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Zeus bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "zeusBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "zeusBullet.X()",
+                    "zeusBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "zeusBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "zeusBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 248,
+                "g": 141,
+                "r": 28,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Poseidon bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "poseidonBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "poseidonBullet.X()",
+                    "poseidonBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "poseidonBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "poseidonBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 33,
+                "g": 211,
+                "r": 126,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Atenea bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ateneaBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "ateneaBullet.X()",
+                    "ateneaBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "ateneaBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "ateneaBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -16133,6 +17258,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
         {
           "name": "ObjectSpawner",
           "type": "ObjectSpawner::ObjectSpawner"
