@@ -4469,6 +4469,19 @@
           "actions": [
             {
               "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/=\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "ModVarGlobalTxt"
               },
               "parameters": [
