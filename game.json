@@ -1042,6 +1042,33 @@
         "name": "assets\\upgrade2 - copia.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/normal6.png\"}",
+        "name": "normal6",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "normal7",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite18.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite18.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -15534,7 +15561,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5444448946033386,
+        "zoomFactor": 0.621678946532534,
         "windowMask": false
       },
       "objectsGroups": [
@@ -15587,6 +15614,30 @@
           "name": "Hp",
           "type": "number",
           "value": 248
+        },
+        {
+          "folded": true,
+          "name": "towers_merged",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "towers_buyed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "enemyKilled",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "currencySpent",
+          "type": "number",
+          "value": 0
         },
         {
           "folded": true,
@@ -15730,8 +15781,8 @@
           "layer": "",
           "name": "NumberOfCoins",
           "persistentUuid": "db07ea38-e41c-4cfc-95f4-2f6c8fe654dc",
-          "width": 135,
-          "x": 83,
+          "width": 129,
+          "x": 89,
           "y": 108,
           "zOrder": 3,
           "numberProperties": [],
@@ -15836,8 +15887,8 @@
           "layer": "",
           "name": "OptionsText",
           "persistentUuid": "4b6fee88-bf20-43af-94fc-43b9f3029ebf",
-          "width": 238,
-          "x": 7,
+          "width": 236,
+          "x": 0,
           "y": 715,
           "zOrder": 11,
           "numberProperties": [],
@@ -17123,8 +17174,8 @@
           "name": "ZeusTowerBuyer",
           "persistentUuid": "0dd37913-3137-4755-b30f-64485273fb89",
           "width": 0,
-          "x": 120,
-          "y": 223,
+          "x": 63,
+          "y": 365,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -17155,8 +17206,8 @@
           "name": "AresTowerBuyer",
           "persistentUuid": "0ca90f27-b34d-4e9a-a7a4-a5aaa6809da5",
           "width": 0,
-          "x": 120,
-          "y": 333,
+          "x": 170,
+          "y": 365,
           "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
@@ -17171,7 +17222,7 @@
           "persistentUuid": "026b8a7a-eece-4cbf-8dc0-70c57c0e3322",
           "width": 0,
           "x": 120,
-          "y": 663,
+          "y": 638,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -17185,8 +17236,8 @@
           "name": "PoseidonTowerBuyer",
           "persistentUuid": "6518a601-7bfd-4f47-ad35-8feeb94db610",
           "width": 0,
-          "x": 116,
-          "y": 443,
+          "x": 65,
+          "y": 490,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -17200,8 +17251,8 @@
           "name": "AteneaTowerBuyer",
           "persistentUuid": "38489913-7e49-4673-aef3-352e13aae0d5",
           "width": 0,
-          "x": 116,
-          "y": 553,
+          "x": 170,
+          "y": 490,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -17218,6 +17269,36 @@
           "x": 306,
           "y": 157,
           "zOrder": 27,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 45,
+          "layer": "",
+          "name": "roundsText",
+          "persistentUuid": "0d42c984-fb5e-4824-b365-6643508b0d07",
+          "width": 237,
+          "x": 2,
+          "y": 197,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "enemyKillsText",
+          "persistentUuid": "3d762f15-c4f8-406b-bfdb-97ecd03eb9ea",
+          "width": 246,
+          "x": 1,
+          "y": 253,
+          "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -17636,7 +17717,7 @@
           "behaviors": [],
           "string": "0",
           "font": "Blaka-Regular.ttf",
-          "textAlignment": "center",
+          "textAlignment": "left",
           "characterSize": 40,
           "color": {
             "b": 0,
@@ -17789,6 +17870,50 @@
           "font": "Blaka-Regular.ttf",
           "textAlignment": "center",
           "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "roundsText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Round: 1",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "enemyKillsText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Enemy killed: 0",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 30,
           "color": {
             "b": 0,
             "g": 0,
@@ -18471,10 +18596,10 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.2,
+              "FireCooldown": 0.5,
               "HasJustFired": false,
-              "FiringArc": 45,
-              "BulletQuantity": 1,
+              "FiringArc": 30,
+              "BulletQuantity": 3,
               "AngleVariance": 0,
               "RotateBullet": true,
               "AmmoQuantity": 0,
@@ -19212,7 +19337,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.1,
+              "FireCooldown": 0.5,
               "HasJustFired": false,
               "FiringArc": 45,
               "BulletQuantity": 1,
@@ -19462,12 +19587,12 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 7
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 10
                 }
               ]
             }
@@ -19486,7 +19611,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewSprite18",
+                      "image": "assets\\NewSprite18.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -19551,12 +19676,12 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 15
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 30
                 }
               ]
             }
@@ -19640,14 +19765,20 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 5
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 8
                 }
               ]
+            },
+            {
+              "folded": true,
+              "name": "numberOfBounces",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -19723,19 +19854,18 @@
           "updateIfNotVisible": false,
           "variables": [
             {
-              "folded": true,
               "name": "damage",
               "type": "structure",
               "children": [
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 2
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 4
                 }
               ]
             }
@@ -20739,6 +20869,45 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Text changer",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "enemyKillsText",
+                    "=",
+                    "\"Enemy killed: \" + ToString(Variable(enemyKilled))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "roundsText",
+                    "=",
+                    "\"Round: \" + ToString(Variable(actualRound))"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -20857,6 +21026,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -21713,6 +21883,33 @@
                       },
                       "parameters": [
                         "Buyers.ZeusTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.PoseidonTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.AresTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.AteneaTower",
                         "True"
                       ]
                     }
@@ -26096,7 +26293,6 @@
           "colorG": 255,
           "colorR": 255,
           "creationTime": 0,
-          "folded": true,
           "name": "Tower shooter",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -26184,6 +26380,15 @@
                         "aresBullet",
                         "\"normal\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"timerExistsAres\""
+                      ]
                     }
                   ]
                 },
@@ -26224,6 +26429,15 @@
                       "parameters": [
                         "aresBullet",
                         "\"upgrade\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"timerExistsAres\""
                       ]
                     }
                   ]
@@ -26625,7 +26839,6 @@
           "colorG": 2,
           "colorR": 208,
           "creationTime": 0,
-          "folded": true,
           "name": "Damage dealer",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -26702,7 +26915,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -26772,13 +26984,22 @@
                             "+",
                             "20"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
+                          ]
                         }
                       ]
                     }
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -26848,9 +27069,64 @@
                             "+",
                             "20"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
+                          ]
                         }
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "aresBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "aresBullet",
+                    "\"timerExistsAres\"",
+                    ">=",
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "aresBullet.X()",
+                    "aresBullet.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "aresBullet",
+                    ""
                   ]
                 }
               ]
@@ -26869,7 +27145,6 @@
               "comment2": ""
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "zeusBullet",
               "conditions": [
@@ -26882,10 +27157,105 @@
                     "zeusBullet.X()",
                     "zeusBullet.Y()"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "zeusBullet",
+                    "numberOfBounces",
+                    "<",
+                    "2"
+                  ]
                 }
               ],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "enemie",
+                        "20",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionTween"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "",
+                        "\"bounce\"",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "\"linear\"",
+                        "200",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "numberOfBounces",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "enemie",
+                        "20",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        ""
+                      ]
+                    }
+                  ]
+                },
                 {
                   "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
@@ -26901,15 +27271,6 @@
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "zeusBullet",
-                        ""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "ModVarObjet"
@@ -26957,6 +27318,43 @@
                             "+",
                             "20"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "zeusBullet",
+                            "numberOfBounces",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "zeusBullet",
+                            ""
+                          ]
                         }
                       ]
                     }
@@ -26977,15 +27375,6 @@
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "zeusBullet",
-                        ""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "ModVarObjet"
@@ -27032,6 +27421,43 @@
                             "Num_Coins",
                             "+",
                             "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "zeusBullet",
+                            "numberOfBounces",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "zeusBullet",
+                            ""
                           ]
                         }
                       ]
@@ -27105,6 +27531,17 @@
                         "-",
                         "poseidonBullet.Variable(damage.normal)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "10"
+                      ]
                     }
                   ],
                   "events": [
@@ -27141,6 +27578,16 @@
                             "Num_Coins",
                             "+",
                             "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -27181,6 +27628,17 @@
                         "-",
                         "poseidonBullet.Variable(damage.upgraded)"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "5"
+                      ]
                     }
                   ],
                   "events": [
@@ -27217,6 +27675,16 @@
                             "Num_Coins",
                             "+",
                             "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -27327,6 +27795,16 @@
                             "+",
                             "20"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
+                          ]
                         }
                       ]
                     }
@@ -27402,6 +27880,16 @@
                             "Num_Coins",
                             "+",
                             "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
