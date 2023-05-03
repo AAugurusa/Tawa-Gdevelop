@@ -15570,7 +15570,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6216789465325351,
+        "zoomFactor": 0.6216789465325352,
         "windowMask": false
       },
       "objectsGroups": [
@@ -20968,7 +20968,6 @@
           "colorG": 2,
           "colorR": 208,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemy spawnerd",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28476,7 +28475,6 @@
           "colorG": 136,
           "colorR": 134,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemy path manager",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28543,6 +28541,45 @@
                   },
                   "parameters": [
                     "Enemys",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 214,
+          "colorG": 200,
+          "colorR": 174,
+          "creationTime": 0,
+          "name": "Finishers",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Width"
+                  },
+                  "parameters": [
+                    "HelthBarInside",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"MainMenu\"",
                     ""
                   ]
                 }
