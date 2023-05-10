@@ -28866,19 +28866,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SendAsyncRequest"
-                  },
-                  "parameters": [
-                    "\"http://localhost:2606/api/stats/update/\" + GlobalVariableString(nickname)",
-                    " \"{\\\"t_merge\\\": \\ + Variable(towers_merged) + \"\\\", \\\"t_buy\\\": \\ + Variable(towers_buyed) + \"\\\",\\\"enemy_kills\\\": \\ + Variable(enemyKilled) + \"\\\", \\\"cur_spent\\\": \\ + Variable(currencySpent) + \"\\\", \\\"high_score\\\": \\ + Variable(actualRound) + \"\\\",\\\"game_time\\\": \\ + TimeFromStart() + \"\\\"}\" ",
-                    "\"PUT\"",
-                    "\"application/json\"",
-                    "jsonString",
-                    "ERROR"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "ModVarScene"
                   },
                   "parameters": [
@@ -28913,7 +28900,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateT_merge/\" + GlobalVariableString(nickname)",
+                        "ToJSON(towers_merged)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -28929,7 +28930,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateT_buy/\" + GlobalVariableString(nickname)",
+                        "ToJSON(towers_buyed)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -28945,7 +28960,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateCur_spent/\" + GlobalVariableString(nickname)",
+                        "ToJSON(currencySpent)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -28961,7 +28990,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateEnemy_kills/\" + GlobalVariableString(nickname)",
+                        "ToJSON(enemyKilled)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -28977,7 +29020,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateHigh_score/\" + GlobalVariableString(nickname)",
+                        "ToJSON(highRound)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -28993,7 +29050,21 @@
                       ]
                     }
                   ],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateGame_time/\" + GlobalVariableString(nickname)",
+                        "ToJSON(gameTime)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
