@@ -15644,28 +15644,70 @@
           "value": 100
         },
         {
-          "folded": true,
           "name": "towers_merged",
-          "type": "number",
-          "value": 0
+          "type": "structure",
+          "children": [
+            {
+              "name": "t_merge",
+              "type": "number",
+              "value": 0
+            }
+          ]
         },
         {
-          "folded": true,
           "name": "towers_buyed",
-          "type": "number",
-          "value": 0
+          "type": "structure",
+          "children": [
+            {
+              "name": "t_buy",
+              "type": "number",
+              "value": 0
+            }
+          ]
         },
         {
-          "folded": true,
           "name": "enemyKilled",
-          "type": "number",
-          "value": 0
+          "type": "structure",
+          "children": [
+            {
+              "name": "enemy_kills",
+              "type": "number",
+              "value": 0
+            }
+          ]
         },
         {
-          "folded": true,
           "name": "currencySpent",
-          "type": "number",
-          "value": 0
+          "type": "structure",
+          "children": [
+            {
+              "name": "cur_spent",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "highRound",
+          "type": "structure",
+          "children": [
+            {
+              "name": "high_score",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "gameTime",
+          "type": "structure",
+          "children": [
+            {
+              "name": "game_time",
+              "type": "number",
+              "value": 0
+            }
+          ]
         },
         {
           "folded": true,
@@ -22431,6 +22473,26 @@
                         "isUpgraded",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "300"
+                      ]
                     }
                   ]
                 },
@@ -22499,9 +22561,10 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
-                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 150 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"ZeusTower\")",
@@ -22510,7 +22573,13 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 150))",
-                        "}"
+                        "    ",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 150))",
+                        "}",
+                        "",
+                        ""
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -22934,6 +23003,26 @@
                         "isUpgraded",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "200"
+                      ]
                     }
                   ]
                 },
@@ -22992,6 +23081,8 @@
                         "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 100 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AresTower\")",
@@ -23000,6 +23091,9 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 100))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 100))",
                         "}"
                       ],
                       "parameterObjects": "Tile",
@@ -23424,10 +23518,31 @@
                         "isUpgraded",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "100"
+                      ]
                     }
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -23478,9 +23593,10 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
-                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 50 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"PoseidonTower\")",
@@ -23489,7 +23605,12 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 50))",
-                        "}"
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 50))",
+                        "}",
+                        "",
+                        ""
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -24687,6 +24808,26 @@
                         "isUpgraded",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "150"
+                      ]
                     }
                   ]
                 },
@@ -24745,6 +24886,9 @@
                         "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
+                        "",
                         "",
                         "if(numOfCoins._value >= 75 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AteneaTower\")",
@@ -24753,6 +24897,9 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 75))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 75))",
                         "}"
                       ],
                       "parameterObjects": "Tile",
@@ -25648,6 +25795,26 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "300"
+                      ]
                     }
                   ]
                 },
@@ -25723,6 +25890,8 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 150 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"ZeusTower\")",
@@ -25731,6 +25900,10 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 150))",
+                        "    ",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 150))",
                         "}",
                         "",
                         ""
@@ -25980,6 +26153,26 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "200"
+                      ]
                     }
                   ]
                 },
@@ -26053,9 +26246,11 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
+                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
-                        "",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 100 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AresTower\")",
@@ -26064,9 +26259,10 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 100))",
-                        "}",
-                        "",
-                        ""
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 100))",
+                        "}"
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -26308,6 +26504,26 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "100"
+                      ]
                     }
                   ]
                 },
@@ -26383,6 +26599,8 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
                         "if(numOfCoins._value >= 50 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"PoseidonTower\")",
@@ -26391,6 +26609,9 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 50))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 50))",
                         "}",
                         "",
                         ""
@@ -26640,6 +26861,26 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "150"
+                      ]
                     }
                   ]
                 },
@@ -26715,6 +26956,9 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
+                        "",
                         "",
                         "if(numOfCoins._value >= 75 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AteneaTower\")",
@@ -26723,6 +26967,9 @@
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
                         "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 75))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 75))",
                         "}",
                         "",
                         ""
@@ -27373,7 +27620,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -27449,7 +27695,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -27535,7 +27781,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -27722,7 +27968,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -27732,7 +27978,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -27819,7 +28064,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -27862,7 +28107,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -27938,7 +28182,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -27948,7 +28192,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -28024,7 +28267,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -28143,7 +28386,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -28153,7 +28396,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -28229,7 +28471,7 @@
                             "value": "ModVarScene"
                           },
                           "parameters": [
-                            "enemyKilled",
+                            "enemyKilled.enemy_kills",
                             "+",
                             "1"
                           ]
@@ -28634,6 +28876,26 @@
                     "jsonString",
                     "ERROR"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "highRound.high_score",
+                    "=",
+                    "Variable(actualRound)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "gameTime.game_time",
+                    "=",
+                    "TimeFromStart()"
+                  ]
                 }
               ],
               "events": [
@@ -28645,7 +28907,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "towers_merged",
+                        "towers_merged.t_merge",
                         ">",
                         "0"
                       ]
@@ -28661,7 +28923,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "towers_buyed",
+                        "towers_buyed.t_buy",
                         ">",
                         "0"
                       ]
@@ -28677,7 +28939,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "enemyKilled",
+                        "currencySpent.cur_spent",
                         ">",
                         "0"
                       ]
@@ -28693,7 +28955,7 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "currencySpent",
+                        "enemyKilled.enemy_kills",
                         ">",
                         "0"
                       ]
@@ -28709,7 +28971,23 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "actualRound",
+                        "highRound.high_score",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "gameTime.game_time",
                         ">",
                         "0"
                       ]
@@ -28751,7 +29029,6 @@
           "colorG": 2,
           "colorR": 208,
           "creationTime": 0,
-          "folded": true,
           "name": "TESTING (COMENTAR)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28811,14 +29088,24 @@
             {
               "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
                     "value": "DebuggerTools::ConsoleLog"
                   },
                   "parameters": [
-                    "ToString(GlobalVariable(soundEnabled))",
+                    "ToString(Variable(currencySpent.cur_spent))",
                     "",
                     ""
                   ]
