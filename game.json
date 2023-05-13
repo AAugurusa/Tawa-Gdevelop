@@ -24956,7 +24956,6 @@
           "colorG": 211,
           "colorR": 126,
           "creationTime": 0,
-          "folded": true,
           "name": "Refund",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25131,238 +25130,14 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 28,
-                    "g": 231,
-                    "r": 248,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Zeus",
-                  "comment2": ""
-                },
-                {
                   "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "SourisSurObjet"
                       },
                       "parameters": [
-                        "RefundDummy",
-                        "ZeusTower",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "ZeusTower",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ToggleObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "isOcupied"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "ZeusTower",
-                            "\"Normal\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "75"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "ZeusTower",
-                            "\"Upgrade\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "150"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 254,
-                    "g": 19,
-                    "r": 144,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Poseidon",
-                  "comment2": ""
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RefundDummy",
-                        "PoseidonTower",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "PoseidonTower",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ToggleObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "isOcupied"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "PoseidonTower",
-                            "\"Upgrade\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "50"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "PoseidonTower",
-                            "\"Normal\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "25"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 27,
-                    "g": 2,
-                    "r": 208,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Ares",
-                  "comment2": ""
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "RefundDummy",
                         "AresTower",
                         "",
                         "",
@@ -25446,27 +25221,196 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 33,
-                    "g": 211,
-                    "r": 126,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Atenea",
-                  "comment2": ""
-                },
-                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "SourisSurObjet"
                       },
                       "parameters": [
-                        "RefundDummy",
+                        "PoseidonTower",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ToggleObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "isOcupied"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "PoseidonTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "25"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "PoseidonTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "50"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ToggleObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "isOcupied"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "ZeusTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "75"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "ZeusTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "150"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
                         "AteneaTower",
                         "",
                         "",
@@ -25503,33 +25447,7 @@
                             "value": "AnimationName"
                           },
                           "parameters": [
-                            "AresTower",
-                            "\"Upgrade\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "75"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "AresTower",
+                            "AteneaTower",
                             "\"Normal\""
                           ]
                         }
@@ -25543,6 +25461,32 @@
                             "Num_Coins",
                             "+",
                             "35"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "AteneaTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "75"
                           ]
                         }
                       ]
@@ -28829,6 +28773,7 @@
           "colorG": 200,
           "colorR": 174,
           "creationTime": 0,
+          "folded": true,
           "name": "Finishers",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
