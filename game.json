@@ -849,7 +849,7 @@
         "alwaysLoaded": false,
         "file": "assets/NewSprite16.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite16.png\"}",
         "name": "NewSprite16",
         "smoothed": true,
         "userAdded": false
@@ -1076,6 +1076,69 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "normal8",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite19.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite19",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite20.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite20",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite21.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite21.png\"}",
+        "name": "NewSprite21",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/path_type2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "path_type2",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/path_type22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "path_type22",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/path_type3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "path_type3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite22",
         "smoothed": true,
         "userAdded": false
       }
@@ -4955,8 +5018,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Parcial1",
-      "name": "Parcial1",
+      "mangledName": "StandarLevel",
+      "name": "StandarLevel",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -4972,7 +5035,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5444448946033386,
+        "zoomFactor": 0.5444448946033403,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5017,6 +5080,14 @@
               "name": "ateneaBullet"
             }
           ]
+        },
+        {
+          "name": "Paths",
+          "objects": [
+            {
+              "name": "path_type1"
+            }
+          ]
         }
       ],
       "variables": [
@@ -5025,6 +5096,84 @@
           "name": "Hp",
           "type": "number",
           "value": 248
+        },
+        {
+          "folded": true,
+          "name": "Num_Coins",
+          "type": "number",
+          "value": 100
+        },
+        {
+          "folded": true,
+          "name": "towers_merged",
+          "type": "structure",
+          "children": [
+            {
+              "name": "t_merge",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "towers_buyed",
+          "type": "structure",
+          "children": [
+            {
+              "name": "t_buy",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "enemyKilled",
+          "type": "structure",
+          "children": [
+            {
+              "name": "enemy_kills",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "currencySpent",
+          "type": "structure",
+          "children": [
+            {
+              "name": "cur_spent",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "highRound",
+          "type": "structure",
+          "children": [
+            {
+              "name": "high_score",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "gameTime",
+          "type": "structure",
+          "children": [
+            {
+              "name": "game_time",
+              "type": "number",
+              "value": 0
+            }
+          ]
         },
         {
           "folded": true,
@@ -5040,12 +5189,6 @@
         },
         {
           "folded": true,
-          "name": "Num_Coins",
-          "type": "number",
-          "value": 100
-        },
-        {
-          "folded": true,
           "name": "PauseMenuEnabled",
           "type": "boolean",
           "value": false
@@ -5055,6 +5198,12 @@
           "name": "SureMenuEnabled",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "numOfEnemysSpawnedInThisRound",
+          "type": "number",
+          "value": 0
         },
         {
           "folded": true,
@@ -5125,9 +5274,69 @@
         },
         {
           "folded": true,
-          "name": "numOfEnemysSpawnedInThisRound",
-          "type": "number",
-          "value": 0
+          "name": "ERROR",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "folded": true,
+          "name": "jsonMsg",
+          "type": "structure",
+          "children": []
+        },
+        {
+          "folded": true,
+          "name": "jsonString",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "levelStructure",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "arez_active",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "folded": true,
+              "name": "atenea_active",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "folded": true,
+              "name": "merge_active",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "folded": true,
+              "name": "path_type",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "folded": true,
+              "name": "poseidon_active",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "folded": true,
+              "name": "refund_active",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "folded": true,
+              "name": "zeus_active",
+              "type": "boolean",
+              "value": true
+            }
+          ]
         }
       ],
       "instances": [
@@ -5168,8 +5377,8 @@
           "layer": "",
           "name": "NumberOfCoins",
           "persistentUuid": "db07ea38-e41c-4cfc-95f4-2f6c8fe654dc",
-          "width": 135,
-          "x": 83,
+          "width": 129,
+          "x": 89,
           "y": 108,
           "zOrder": 3,
           "numberProperties": [],
@@ -5199,6 +5408,7 @@
           "locked": true,
           "name": "BannerItems",
           "persistentUuid": "f2138e2e-6b2d-422a-a7b2-6750cf178b4b",
+          "sealed": true,
           "width": 265,
           "x": -14,
           "y": -22,
@@ -5274,8 +5484,8 @@
           "layer": "",
           "name": "OptionsText",
           "persistentUuid": "4b6fee88-bf20-43af-94fc-43b9f3029ebf",
-          "width": 238,
-          "x": 7,
+          "width": 236,
+          "x": 0,
           "y": 715,
           "zOrder": 11,
           "numberProperties": [],
@@ -5858,7 +6068,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "63d7b318-9ac4-4f51-b6c9-64872e3a0213",
           "width": 0,
@@ -5970,7 +6179,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "287af876-efd0-41c4-aab1-ae2a3547d1da",
           "width": 0,
@@ -5986,7 +6194,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "1d18f6f1-a3a1-4294-8fc9-4995eb09f9d3",
           "width": 0,
@@ -6098,7 +6305,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "5c3c59f7-436a-4284-90a5-7d75ad18c16d",
           "width": 0,
@@ -6130,7 +6336,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "9d25e48d-bbcf-4410-a822-3a53bbdf8c24",
           "width": 0,
@@ -6146,7 +6351,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "d00a9c70-0ec2-45a7-9e6c-52fb294eeaec",
           "width": 0,
@@ -6242,7 +6446,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "locked": true,
           "name": "Tile",
           "persistentUuid": "5c261222-8b90-4bef-89ed-911a33535160",
           "width": 0,
@@ -6543,26 +6746,11 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "EndReachObject",
-          "persistentUuid": "9fabd295-9014-463e-8b3b-a1bd228b6d9c",
-          "width": 0,
-          "x": 1297,
-          "y": 250,
-          "zOrder": 21,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "ZeusTowerBuyer",
           "persistentUuid": "0dd37913-3137-4755-b30f-64485273fb89",
           "width": 0,
           "x": 120,
-          "y": 223,
+          "y": 555,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -6594,7 +6782,7 @@
           "persistentUuid": "0ca90f27-b34d-4e9a-a7a4-a5aaa6809da5",
           "width": 0,
           "x": 120,
-          "y": 333,
+          "y": 465,
           "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
@@ -6609,7 +6797,7 @@
           "persistentUuid": "026b8a7a-eece-4cbf-8dc0-70c57c0e3322",
           "width": 0,
           "x": 120,
-          "y": 663,
+          "y": 645,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -6623,8 +6811,8 @@
           "name": "PoseidonTowerBuyer",
           "persistentUuid": "6518a601-7bfd-4f47-ad35-8feeb94db610",
           "width": 0,
-          "x": 116,
-          "y": 443,
+          "x": 120,
+          "y": 285,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -6638,8 +6826,8 @@
           "name": "AteneaTowerBuyer",
           "persistentUuid": "38489913-7e49-4673-aef3-352e13aae0d5",
           "width": 0,
-          "x": 116,
-          "y": 553,
+          "x": 120,
+          "y": 375,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -6648,14 +6836,584 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 10,
+          "height": 45,
           "layer": "",
-          "name": "EnemySpawner",
-          "persistentUuid": "3be4878b-774c-4586-b307-f5fc7cd476b6",
-          "width": 10,
-          "x": 306,
-          "y": 157,
-          "zOrder": 27,
+          "name": "roundsText",
+          "persistentUuid": "0d42c984-fb5e-4824-b365-6643508b0d07",
+          "width": 237,
+          "x": 2,
+          "y": 180,
+          "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "f1dc26cf-dd3f-42e4-8e84-5cc852113783",
+          "width": 0,
+          "x": 355,
+          "y": 116,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "1d6c09eb-3871-49f3-a57e-4ee40e2f1fb3",
+          "width": 0,
+          "x": 445,
+          "y": 116,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "1e423805-8c24-41ea-8757-fb0039c44593",
+          "width": 0,
+          "x": 445,
+          "y": 206,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "877bebf2-5860-49d1-bb19-43c3ae311438",
+          "width": 0,
+          "x": 445,
+          "y": 296,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "f8cb563d-e810-45e6-af05-3cbf67d4184c",
+          "width": 0,
+          "x": 445,
+          "y": 386,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "f0952f7f-083e-44e6-867e-fe94f01c4367",
+          "width": 0,
+          "x": 445,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "6f1b7a7b-d5b8-4b37-8591-c62bef268fe6",
+          "width": 0,
+          "x": 535,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "f2c88afe-b020-4652-aeca-d9fcbfa1c341",
+          "width": 0,
+          "x": 265,
+          "y": 116,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "5c50bd89-a45e-47df-b6a2-b5996d2b25f1",
+          "width": 0,
+          "x": 1255,
+          "y": 206,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "1bcadd75-9507-4ca1-b17c-cb9345ecf99b",
+          "width": 0,
+          "x": 1165,
+          "y": 206,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "45c3dda0-dc13-48e1-bfa8-d28d4bab87db",
+          "width": 0,
+          "x": 1165,
+          "y": 296,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "de95ab40-c621-489e-a8f1-bb4838918019",
+          "width": 0,
+          "x": 1165,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "2b02bb31-af76-4692-9f33-64c931ab32d1",
+          "width": 0,
+          "x": 1165,
+          "y": 386,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "1a5eb14d-d651-4831-ac0d-53dc8336f9ae",
+          "width": 0,
+          "x": 1165,
+          "y": 566,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "890a74be-266e-4bc3-8f96-1233fe74526a",
+          "width": 0,
+          "x": 1075,
+          "y": 566,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "336f6dbf-ea1a-4ce8-a1e0-a5e8f31a4df6",
+          "width": 0,
+          "x": 985,
+          "y": 566,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "c2777e6a-8327-4f17-a56d-2c9c9612c1d2",
+          "width": 0,
+          "x": 895,
+          "y": 566,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "9cb9a6fc-55f6-4436-9ad9-e75fc01bafb3",
+          "width": 0,
+          "x": 895,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "03af7bce-846d-41fb-a325-412c8a4562b9",
+          "width": 0,
+          "x": 895,
+          "y": 386,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "6dcd4809-6a7e-4f28-b738-0afe2cec0154",
+          "width": 0,
+          "x": 625,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "f0836b14-22a9-40f4-ada4-55b3d4230c0f",
+          "width": 0,
+          "x": 715,
+          "y": 296,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "a1d29cc2-3abe-46da-8ce0-769bdc73ebfe",
+          "width": 0,
+          "x": 715,
+          "y": 386,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "b8104d52-157e-45e5-b200-80c82b0a2e7d",
+          "width": 0,
+          "x": 715,
+          "y": 476,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "08506a41-b048-4c77-8cb4-526d0c86aaa0",
+          "width": 0,
+          "x": 805,
+          "y": 296,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tile",
+          "persistentUuid": "bac602f8-01b4-47f2-bb51-56040f7b3ef5",
+          "width": 0,
+          "x": 895,
+          "y": 296,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type1",
+          "persistentUuid": "c44eb1c7-9806-407a-a7cb-017fa1dc0f21",
+          "width": 1070,
+          "x": 268,
+          "y": 337,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "bdad5fa0-8260-49fa-b346-f084cc41afe5",
+          "width": 317,
+          "x": 266,
+          "y": 248,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "66682e6b-2ff4-4f10-8069-41a1107a295e",
+          "width": 372,
+          "x": 395,
+          "y": 432,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "9ee2703f-cb1d-4c8b-9f9d-383cbfbe63fb",
+          "width": 621,
+          "x": 581,
+          "y": 615,
+          "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 205,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "468e53e4-2898-4bac-857e-9b21e7f893cc",
+          "width": 5,
+          "x": 1201,
+          "y": 415,
+          "zOrder": 32,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "b84b3643-ab2f-4713-9ac2-26014ab7a5ce",
+          "width": 187,
+          "x": 1018,
+          "y": 414,
+          "zOrder": 33,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 266,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "e07c749d-eb60-473a-8f26-c8ba099f8a7a",
+          "width": 5,
+          "x": 1016,
+          "y": 151,
+          "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type2",
+          "persistentUuid": "efce89a9-13e0-4370-b575-859a9a2de51e",
+          "width": 320,
+          "x": 1016,
+          "y": 149,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type3",
+          "persistentUuid": "60aac4a9-2f2f-4596-9ce8-28dbd6fa31b1",
+          "width": 413,
+          "x": 269,
+          "y": 429,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 288,
+          "layer": "",
+          "name": "path_type3",
+          "persistentUuid": "fad9b5cc-f65c-4c85-b367-a5f8ee59b87b",
+          "width": 5,
+          "x": 677,
+          "y": 145,
+          "zOrder": 37,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type3",
+          "persistentUuid": "c8f0816c-3ff3-48de-9fca-207f94e9c1e2",
+          "width": 263,
+          "x": 679,
+          "y": 145,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 380,
+          "layer": "",
+          "name": "path_type3",
+          "persistentUuid": "43e96e48-1de8-4707-b14e-d6c177aee5ae",
+          "width": 5,
+          "x": 942,
+          "y": 145,
+          "zOrder": 39,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "path_type3",
+          "persistentUuid": "744fb958-ac26-496f-b8af-dd6bd7bdef5f",
+          "width": 391,
+          "x": 942,
+          "y": 525,
+          "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7074,7 +7832,7 @@
           "behaviors": [],
           "string": "0",
           "font": "Blaka-Regular.ttf",
-          "textAlignment": "center",
+          "textAlignment": "left",
           "characterSize": 40,
           "color": {
             "b": 0,
@@ -7227,6 +7985,50 @@
           "font": "Blaka-Regular.ttf",
           "textAlignment": "center",
           "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "roundsText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Round: 1",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "enemyKillsText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Enemy killed: 0",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 30,
           "color": {
             "b": 0,
             "g": 0,
@@ -7895,13 +8697,13 @@
               "folded": true,
               "name": "bulletSpeedNormal",
               "type": "number",
-              "value": 500
+              "value": 300
             },
             {
               "folded": true,
               "name": "bulletSpeedUpgrade",
               "type": "number",
-              "value": 550
+              "value": 350
             }
           ],
           "effects": [],
@@ -7909,10 +8711,10 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.2,
+              "FireCooldown": 0.5,
               "HasJustFired": false,
-              "FiringArc": 45,
-              "BulletQuantity": 1,
+              "FiringArc": 30,
+              "BulletQuantity": 3,
               "AngleVariance": 0,
               "RotateBullet": true,
               "AmmoQuantity": 0,
@@ -8156,7 +8958,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 1,
+              "FireCooldown": 0.2,
               "HasJustFired": false,
               "FiringArc": 45,
               "BulletQuantity": 1,
@@ -8398,13 +9200,13 @@
               "folded": true,
               "name": "bulletSpeedUpgrade",
               "type": "number",
-              "value": 550
+              "value": 350
             },
             {
               "folded": true,
               "name": "bulletSpeedNormal",
               "type": "number",
-              "value": 500
+              "value": 300
             }
           ],
           "effects": [],
@@ -8412,7 +9214,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.2,
+              "FireCooldown": 0.5,
               "HasJustFired": false,
               "FiringArc": 45,
               "BulletQuantity": 1,
@@ -8636,13 +9438,13 @@
               "folded": true,
               "name": "bulletSpeedNormal",
               "type": "number",
-              "value": 500
+              "value": 300
             },
             {
               "folded": true,
               "name": "bulletSpeedUpgrade",
               "type": "number",
-              "value": 550
+              "value": 350
             }
           ],
           "effects": [],
@@ -8650,7 +9452,7 @@
             {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.1,
+              "FireCooldown": 0.8,
               "HasJustFired": false,
               "FiringArc": 45,
               "BulletQuantity": 1,
@@ -8846,7 +9648,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite16",
+                      "image": "NewSprite22",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8900,12 +9702,12 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 7
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 10
                 }
               ]
             }
@@ -8924,7 +9726,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewSprite18",
+                      "image": "assets\\NewSprite18.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8989,12 +9791,12 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 18
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 34
                 }
               ]
             }
@@ -9078,18 +9880,45 @@
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 5
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 8
                 }
               ]
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "SpeedPathMovement",
+              "type": "CurvedMovement::SpeedPathMovement",
+              "Rotation": false,
+              "RotationOffset": 0,
+              "Speed": 0,
+              "PathOriginX": 0,
+              "PathOriginY": 0,
+              "PathName": "",
+              "TargetedSpeed": 0,
+              "Acceleration": 0,
+              "DrawingElementIndex": 0,
+              "X": 0,
+              "Y": 0,
+              "PathAngle": 0,
+              "PathScale": 0,
+              "RepetitionCount": 0,
+              "ShouldLoop": false,
+              "DrawingPathOriginX": 0,
+              "DrawingPathOriginY": 0,
+              "DebugLineStrokeWidth": 0,
+              "PreviousSpeed": 0,
+              "CurrentLength": 0,
+              "IsLookingBack": false,
+              "Viewpoint": "Top-Down"
+            }
+          ],
           "animations": [
             {
               "name": "normal",
@@ -9161,25 +9990,59 @@
           "updateIfNotVisible": false,
           "variables": [
             {
-              "folded": true,
               "name": "damage",
               "type": "structure",
               "children": [
                 {
                   "name": "normal",
                   "type": "number",
-                  "value": 10
+                  "value": 15
                 },
                 {
                   "name": "upgraded",
                   "type": "number",
-                  "value": 15
+                  "value": 30
                 }
               ]
             }
           ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "RotateBullet": true,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 1,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 1,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0,
+              "BulletSpeedVariance": 0
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "normal",
@@ -9192,7 +10055,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\NewSprite18 - copia (2).png",
+                      "image": "normal8",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9242,6 +10105,151 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "path_type1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite21",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 63.5,
+                            "y": 39
+                          },
+                          {
+                            "x": 0,
+                            "y": 39.5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "path_type2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "path_type2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "path_type22",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "path_type3",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "path_type3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "path_type3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -9272,6 +10280,251 @@
                 "YesSureText",
                 "\"Effect\"",
                 "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "path_type1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "path_type2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "path_type3"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "299",
+                    "330",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "338",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type1",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "306",
+                    "250",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "156",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type2",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "300",
+                    "420",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "524",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type3",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -10177,6 +11430,419 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Text changer",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "enemyKillsText",
+                    "=",
+                    "\"Enemy killed: \" + ToString(Variable(enemyKilled))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "roundsText",
+                    "=",
+                    "\"Round: \" + ToString(Variable(actualRound))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Enemy spawnerd",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    "=",
+                    "Variable(nextRound)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SetMaxQuantity"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "Variable(actualRound)*4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SetSpawnPeriod"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "5/Variable(actualRound)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Phase:\" + ToString(Variable(actualRound))",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "<",
+                    "Variable(actualRound)*4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::SpawnObject"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    "enemie",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectSpawner::ObjectSpawner::ObjectWasJustSpawned"
+                  },
+                  "parameters": [
+                    "EnemySpawner",
+                    "ObjectSpawner",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Spawned:\" + ToString(Variable(numOfEnemysSpawnedInThisRound))",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "function randomNumber(min, max) { ",
+                    "    return Math.random() * (max - min) + min;",
+                    "};",
+                    "",
+                    "var lenght = objects.length - 1",
+                    "var lastEnemy = objects[lenght]",
+                    "",
+                    "lastEnemy.setAnimation(randomNumber(1,4))",
+                    ""
+                  ],
+                  "parameterObjects": "enemie",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(normalStats1.acelerationNormal)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(normalStats1.maxSpeedNormal)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "enemie.Variable(normalStats1.normalHealth)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(brutusStats2.acelerationBrutus)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(brutusStats2.maxSpeedBrutus)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "enemie.Variable(brutusStats2.brutusHealth)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(assasinStats3.acelerationAssasin)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "enemie.Variable(assasinStats3.maxSpeedAssasin)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "=",
+                        "enemie.Variable(assasinStats3.assasinHealth)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numOfEnemysSpawnedInThisRound",
+                    "=",
+                    "Variable(actualRound)*4"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Got to max amount of enemys!\"",
+                    "",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -10274,6 +11940,15 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.zeus_active",
+                    "True"
+                  ]
                 }
               ],
               "actions": [
@@ -10366,6 +12041,15 @@
                         "True"
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.arez_active",
+                    "True"
                   ]
                 }
               ],
@@ -10460,6 +12144,15 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.poseidon_active",
+                    "True"
+                  ]
                 }
               ],
               "actions": [
@@ -10553,6 +12246,15 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.refund_active",
+                    "True"
+                  ]
                 }
               ],
               "actions": [
@@ -10645,6 +12347,15 @@
                         "True"
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.atenea_active",
+                    "True"
                   ]
                 }
               ],
@@ -10780,6 +12491,42 @@
                         "Buyers.ZeusTower",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.PoseidonTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.AresTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.AteneaTower",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buyers.RefundTower",
+                        "True"
+                      ]
                     }
                   ]
                 }
@@ -10865,6 +12612,15 @@
                   "parameters": [
                     "dragAndDrop.dr&drZeus",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.zeus_active",
+                    "True"
                   ]
                 },
                 {
@@ -11146,7 +12902,7 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "300"
                       ]
                     },
                     {
@@ -11157,6 +12913,15 @@
                         "ZeusTower",
                         "isUpgraded",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -11196,7 +12961,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "300"
                       ]
                     },
                     {
@@ -11207,6 +12972,26 @@
                         "ZeusTower",
                         "isUpgraded",
                         "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "300"
                       ]
                     }
                   ]
@@ -11276,18 +13061,25 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
-                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 150 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"ZeusTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
-                        "}"
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 150))",
+                        "    ",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 150))",
+                        "}",
+                        "",
+                        ""
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -11378,6 +13170,15 @@
                   "parameters": [
                     "dragAndDrop.dr&drAres",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.arez_active",
+                    "True"
                   ]
                 },
                 {
@@ -11659,7 +13460,7 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "200"
                       ]
                     },
                     {
@@ -11670,6 +13471,15 @@
                         "AresTower",
                         "isUpgraded",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -11699,7 +13509,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "200"
                       ]
                     },
                     {
@@ -11710,6 +13520,26 @@
                         "AresTower",
                         "isUpgraded",
                         "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "200"
                       ]
                     }
                   ]
@@ -11769,14 +13599,19 @@
                         "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 100 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AresTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 100))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 100))",
                         "}"
                       ],
                       "parameterObjects": "Tile",
@@ -11868,6 +13703,15 @@
                   "parameters": [
                     "dragAndDrop.dr&drPoseidon",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.poseidon_active",
+                    "True"
                   ]
                 },
                 {
@@ -12149,7 +13993,7 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "100"
                       ]
                     },
                     {
@@ -12160,6 +14004,15 @@
                         "PoseidonTower",
                         "isUpgraded",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -12189,7 +14042,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "100"
                       ]
                     },
                     {
@@ -12200,6 +14053,26 @@
                         "PoseidonTower",
                         "isUpgraded",
                         "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "100"
                       ]
                     }
                   ]
@@ -12256,18 +14129,24 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
-                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 50 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"PoseidonTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
-                        "}"
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 50))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 50))",
+                        "}",
+                        "",
+                        ""
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -12358,6 +14237,15 @@
                   "parameters": [
                     "dragAndDrop.dr&drRefund",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.refund_active",
+                    "True"
                   ]
                 },
                 {
@@ -12586,6 +14474,15 @@
                     "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
+                    "levelStructure.refund_active",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
                     "dragAndDrop.dr&drRefund",
                     "True"
                   ]
@@ -12613,6 +14510,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12678,6 +14576,7 @@
                       "comment2": ""
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12705,21 +14604,65 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "15"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "ToggleObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "Tile",
                             "isOcupied"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "ZeusTower",
+                                "\"Normal\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "75"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "ZeusTower",
+                                "\"Upgrade\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "150"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -12738,6 +14681,7 @@
                       "comment2": ""
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12765,21 +14709,65 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "15"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "ToggleObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "Tile",
                             "isOcupied"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "PoseidonTower",
+                                "\"Upgrade\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "50"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "PoseidonTower",
+                                "\"Normal\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "25"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -12798,6 +14786,7 @@
                       "comment2": ""
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12825,21 +14814,65 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "15"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "ToggleObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "Tile",
                             "isOcupied"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "AresTower",
+                                "\"Normal\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "50"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "AresTower",
+                                "\"Upgrade\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "100"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -12858,6 +14891,7 @@
                       "comment2": ""
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12885,21 +14919,65 @@
                         },
                         {
                           "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Num_Coins",
-                            "+",
-                            "15"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "ToggleObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "Tile",
                             "isOcupied"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "AresTower",
+                                "\"Upgrade\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "75"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "AresTower",
+                                "\"Normal\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Num_Coins",
+                                "+",
+                                "35"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -12951,6 +15029,15 @@
                   "parameters": [
                     "dragAndDrop.dr&drAtenea",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.atenea_active",
+                    "True"
                   ]
                 },
                 {
@@ -13232,7 +15319,7 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "150"
                       ]
                     },
                     {
@@ -13243,6 +15330,15 @@
                         "AteneaTower",
                         "isUpgraded",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -13272,7 +15368,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "150"
                       ]
                     },
                     {
@@ -13284,10 +15380,31 @@
                         "isUpgraded",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "150"
+                      ]
                     }
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13341,14 +15458,20 @@
                         "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "",
+                        "if(numOfCoins._value >= 75 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AteneaTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 75))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 75))",
                         "}"
                       ],
                       "parameterObjects": "Tile",
@@ -13431,6 +15554,15 @@
                   "parameters": [
                     "",
                     "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.refund_active",
+                    "True"
                   ]
                 }
               ],
@@ -13558,6 +15690,15 @@
                     "Buyers.RefundTower",
                     "True"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "levelStructure.refund_active",
+                    "True"
+                  ]
                 }
               ],
               "actions": [
@@ -13580,78 +15721,7 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 28,
-                    "g": 231,
-                    "r": 248,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Zeus",
-                  "comment2": ""
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "ZeusTower",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "ZeusTower",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Num_Coins",
-                        "+",
-                        "15"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ToggleObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "isOcupied"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 27,
-                    "g": 2,
-                    "r": 208,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Ares",
-                  "comment2": ""
-                },
-                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13678,16 +15748,6 @@
                     },
                     {
                       "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Num_Coins",
-                        "+",
-                        "15"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ToggleObjectVariableAsBoolean"
                       },
                       "parameters": [
@@ -13695,22 +15755,64 @@
                         "isOcupied"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "AresTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "50"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "AresTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "100"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 254,
-                    "g": 19,
-                    "r": 144,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Poseidon",
-                  "comment2": ""
-                },
-                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13737,12 +15839,93 @@
                     },
                     {
                       "type": {
-                        "value": "ModVarScene"
+                        "value": "ToggleObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "Num_Coins",
-                        "+",
-                        "15"
+                        "Tile",
+                        "isOcupied"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "PoseidonTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "25"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "PoseidonTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "50"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        ""
                       ]
                     },
                     {
@@ -13754,22 +15937,64 @@
                         "isOcupied"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "ZeusTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "75"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "ZeusTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "150"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 33,
-                    "g": 211,
-                    "r": 126,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Atenea",
-                  "comment2": ""
-                },
-                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13796,21 +16021,65 @@
                     },
                     {
                       "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Num_Coins",
-                        "+",
-                        "15"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ToggleObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Tile",
                         "isOcupied"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "AteneaTower",
+                            "\"Normal\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "35"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AnimationName"
+                          },
+                          "parameters": [
+                            "AteneaTower",
+                            "\"Upgrade\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "75"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -13861,6 +16130,15 @@
                       "parameters": [
                         "",
                         "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.zeus_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14018,7 +16296,16 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "300"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14049,7 +16336,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "300"
                       ]
                     },
                     {
@@ -14060,6 +16347,26 @@
                         "\"UPGRADE\"",
                         "",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "300"
                       ]
                     }
                   ]
@@ -14136,14 +16443,20 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 150 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"ZeusTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 150))",
+                        "    ",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 150))",
                         "}",
                         "",
                         ""
@@ -14193,6 +16506,15 @@
                       "parameters": [
                         "",
                         "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.arez_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14350,7 +16672,16 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "200"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14381,7 +16712,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "200"
                       ]
                     },
                     {
@@ -14392,6 +16723,26 @@
                         "\"UPGRADE\"",
                         "",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "200"
                       ]
                     }
                   ]
@@ -14466,19 +16817,23 @@
                     {
                       "type": "BuiltinCommonInstructions::JsCode",
                       "inlineCode": [
+                        "runtimeScene.setBackgroundColor(100,100,240);",
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 100 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AresTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
-                        "}",
-                        "",
-                        ""
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 100))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 100))",
+                        "}"
                       ],
                       "parameterObjects": "Tile",
                       "useStrict": true,
@@ -14520,6 +16875,15 @@
                       "parameters": [
                         "",
                         "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.poseidon_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14677,7 +17041,16 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -14708,7 +17081,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "100"
                       ]
                     },
                     {
@@ -14719,6 +17092,26 @@
                         "\"UPGRADE\"",
                         "",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "100"
                       ]
                     }
                   ]
@@ -14795,14 +17188,19 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "if(numOfCoins._value >= 50 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"PoseidonTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 50))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 50))",
                         "}",
                         "",
                         ""
@@ -14852,6 +17250,15 @@
                       "parameters": [
                         "",
                         "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.atenea_active",
+                        "True"
                       ]
                     }
                   ],
@@ -15009,7 +17416,16 @@
                       "parameters": [
                         "Num_Coins",
                         ">=",
-                        "60"
+                        "150"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "True"
                       ]
                     }
                   ],
@@ -15040,7 +17456,7 @@
                       "parameters": [
                         "Num_Coins",
                         "-",
-                        "60"
+                        "150"
                       ]
                     },
                     {
@@ -15051,6 +17467,26 @@
                         "\"UPGRADE\"",
                         "",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        "+",
+                        "150"
                       ]
                     }
                   ]
@@ -15127,14 +17563,20 @@
                       "inlineCode": [
                         "var isOcupied = objects[0].getVariables().get(\"isOcupied\")",
                         "var numOfCoins = runtimeScene.getVariables().get(\"Num_Coins\")",
+                        "var t_buy = runtimeScene.getVariables().get(\"towers_buyed\").getChild(\"t_buy\")",
+                        "var currSpent = runtimeScene.getVariables().get(\"currencySpent\").getChild(\"cur_spent\")",
                         "",
-                        "if(numOfCoins._value >= 30 && !isOcupied._bool){",
+                        "",
+                        "if(numOfCoins._value >= 75 && !isOcupied._bool){",
                         "    var newTower = runtimeScene.createObject(\"AteneaTower\")",
                         "    newTower.setZOrder(11)",
                         "    newTower.getVariables().get(\"id\")._value = newTower.id",
                         "    newTower.putAroundObject(objects[0], 0, 0)",
                         "    objects[0].getVariables().get(\"isOcupied\").setBoolean(true)",
-                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 30))",
+                        "    runtimeScene.getVariables().get(\"Num_Coins\").setNumber((numOfCoins._value - 75))",
+                        "    t_buy._value++",
+                        "    console.log(t_buy._value)",
+                        "    currSpent.setNumber((currSpent._value + 75))",
                         "}",
                         "",
                         ""
@@ -15152,6 +17594,1500 @@
                 }
               ],
               "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 255,
+          "colorG": 255,
+          "colorR": 255,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Tower shooter",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ares shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AresTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "AresTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "AresTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "FireBullet",
+                        "AresTower.PointX(\"bulletPoint\")",
+                        "AresTower.PointY(\"bulletPoint\")",
+                        "aresBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AresTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"normal\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"timerExistsAres\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AresTower",
+                        "FireBullet",
+                        "AresTower.PointX(\"bulletPoint\")",
+                        "AresTower.PointY(\"bulletPoint\")",
+                        "aresBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AresTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"upgrade\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"timerExistsAres\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 28,
+                "g": 231,
+                "r": 248,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Zeus shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ZeusTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "ZeusTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "ZeusTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "FireBullet",
+                        "ZeusTower.PointX(\"bulletPoint\")",
+                        "ZeusTower.PointY(\"bulletPoint\")",
+                        "zeusBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "ZeusTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "ZeusTower",
+                        "FireBullet",
+                        "ZeusTower.PointX(\"bulletPoint\")",
+                        "ZeusTower.PointY(\"bulletPoint\")",
+                        "zeusBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "ZeusTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 243,
+                "g": 127,
+                "r": 4,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Posiedon shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "PoseidonTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "PoseidonTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "PoseidonTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "FireBullet",
+                        "PoseidonTower.PointX(\"bulletPoint\")",
+                        "PoseidonTower.PointY(\"bulletPoint\")",
+                        "poseidonBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "PoseidonTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "PoseidonTower",
+                        "FireBullet",
+                        "PoseidonTower.PointX(\"bulletPoint\")",
+                        "PoseidonTower.PointY(\"bulletPoint\")",
+                        "poseidonBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "PoseidonTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 33,
+                "g": 211,
+                "r": 126,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Atenea shooter",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AteneaTower",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "AteneaTower",
+                    "enemie",
+                    "150",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardPosition"
+                  },
+                  "parameters": [
+                    "AteneaTower",
+                    "enemie.X()",
+                    "enemie.Y()",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "\"Normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "FireBullet",
+                        "AteneaTower.PointX(\"bulletPoint\")",
+                        "AteneaTower.PointY(\"bulletPoint\")",
+                        "ateneaBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AteneaTower.Variable(bulletSpeedNormal)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "\"Upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "AteneaTower",
+                        "FireBullet",
+                        "AteneaTower.PointX(\"bulletPoint\")",
+                        "AteneaTower.PointY(\"bulletPoint\")",
+                        "ateneaBullet",
+                        "enemie.PointX(\"bulletPoint\")",
+                        "enemie.PointY(\"bulletPoint\")",
+                        "AteneaTower.Variable(bulletSpeedUpgrade)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 27,
+          "colorG": 2,
+          "colorR": 208,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Damage dealer",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Wall hit = delete bullet = no flying arround ;)",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Bullets",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "BannerItems",
+                    "Bullets.X()",
+                    "Bullets.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullets",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ares bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "aresBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "aresBullet.X()",
+                    "aresBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "aresBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "aresBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "aresBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Ares bullet timer destroyer",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "aresBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "aresBullet",
+                    "\"timerExistsAres\"",
+                    ">=",
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "aresBullet.X()",
+                    "aresBullet.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "aresBullet",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 28,
+                "g": 231,
+                "r": 248,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Zeus bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "zeusBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "zeusBullet.X()",
+                    "zeusBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "zeusBullet.Variable(damage.normal)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "10"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "zeusBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "zeusBullet.Variable(damage.upgraded)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "Pathfinding",
+                        "=",
+                        "5"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 248,
+                "g": 141,
+                "r": 28,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Poseidon bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "poseidonBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "poseidonBullet.X()",
+                    "poseidonBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "poseidonBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "poseidonBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "poseidonBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 33,
+                "g": 211,
+                "r": 126,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Atenea bullet",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ateneaBullet",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "enemie",
+                    "ateneaBullet.X()",
+                    "ateneaBullet.Y()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"normal\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "ateneaBullet.Variable(damage.normal)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        "\"upgrade\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ateneaBullet",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "enemie",
+                        "currentHealth",
+                        "-",
+                        "ateneaBullet.Variable(damage.upgraded)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "enemie",
+                            "currentHealth",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "enemie",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Num_Coins",
+                            "+",
+                            "20"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "enemyKilled.enemy_kills",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -15416,6 +19352,358 @@
           "parameters": []
         },
         {
+          "colorB": 138,
+          "colorG": 136,
+          "colorR": 134,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Enemy path manager",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Enemys",
+                    "Pathfinding",
+                    "",
+                    "EndReachObject.X()",
+                    "EndReachObject.Y()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0,
+                "textB": 0,
+                "textG": 0,
+                "textR": 255
+              },
+              "comment": "Enemy reaches end point",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "Enemys",
+                    "EndReachObject.PointX(\"EnemyDeleter\")",
+                    "EndReachObject.PointY(\"EnemyDeleter\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "HelthBarInside",
+                    "-",
+                    "6"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemys",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 214,
+          "colorG": 200,
+          "colorR": 174,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Finishers",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Width"
+                  },
+                  "parameters": [
+                    "HelthBarInside",
+                    "<=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarGlobalTxt"
+                  },
+                  "parameters": [
+                    "nickname",
+                    "!=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "highRound.high_score",
+                    "=",
+                    "Variable(actualRound)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "gameTime.game_time",
+                    "=",
+                    "TimeFromStart()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "towers_merged.t_merge",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateT_merge/\" + GlobalVariableString(nickname)",
+                        "ToJSON(towers_merged)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "towers_buyed.t_buy",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateT_buy/\" + GlobalVariableString(nickname)",
+                        "ToJSON(towers_buyed)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "currencySpent.cur_spent",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateCur_spent/\" + GlobalVariableString(nickname)",
+                        "ToJSON(currencySpent)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "enemyKilled.enemy_kills",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateEnemy_kills/\" + GlobalVariableString(nickname)",
+                        "ToJSON(enemyKilled)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "highRound.high_score",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateHigh_score/\" + GlobalVariableString(nickname)",
+                        "ToJSON(highRound)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "gameTime.game_time",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://localhost:2606/api/stats/updateGame_time/\" + GlobalVariableString(nickname)",
+                        "ToJSON(gameTime)",
+                        "\"PUT\"",
+                        "\"application/json\"",
+                        "jsonString",
+                        "ERROR"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"MainMenu\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
           "colorB": 27,
           "colorG": 2,
           "colorR": 208,
@@ -15480,14 +19768,24 @@
             {
               "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "d"
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
                     "value": "DebuggerTools::ConsoleLog"
                   },
                   "parameters": [
-                    "ToString(GlobalVariable(soundEnabled))",
+                    "ToString(Variable(currencySpent.cur_spent))",
                     "",
                     ""
                   ]
@@ -15560,6 +19858,14 @@
         {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
+          "name": "SpeedPathMovement",
+          "type": "CurvedMovement::SpeedPathMovement"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
@@ -15583,7 +19889,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5266849057337197,
+        "zoomFactor": 0.562803756159866,
         "windowMask": false
       },
       "objectsGroups": [
@@ -29225,7 +33531,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5444448946033376,
+        "zoomFactor": 0.5095042541079123,
         "windowMask": false
       },
       "objectsGroups": [],
