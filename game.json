@@ -1200,6 +1200,18 @@
       "name": "soundEnabled",
       "type": "boolean",
       "value": true
+    },
+    {
+      "folded": true,
+      "name": "authcookie",
+      "type": "string",
+      "value": "\"\""
+    },
+    {
+      "folded": true,
+      "name": "error",
+      "type": "structure",
+      "children": []
     }
   ],
   "layouts": [
@@ -1853,7 +1865,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Sign up",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2245,6 +2256,19 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/createToken\"",
+                " \"{\\\"nickname\\\": \\\"\" + GlobalVariableString(nickname) + \"\\\"}\" \n",
+                "\"POST\"",
+                "\"application/json\"",
+                "jsonString",
+                "ERROR"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
@@ -3796,6 +3820,21 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 464,
+          "layer": "",
+          "name": "NewText",
+          "persistentUuid": "be854c60-1d98-4364-be90-bf7d74e4aece",
+          "width": 219,
+          "x": 1020,
+          "y": 123,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -4348,12 +4387,81 @@
             },
             {
               "type": {
-                "value": "TextObject::String"
+                "value": "SendAsyncRequest"
               },
               "parameters": [
-                "NewText",
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
                 "=",
-                "GlobalVariableString(nickname)"
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
               ]
             }
           ]
@@ -4619,9 +4727,9 @@
                 "value": "SendAsyncRequest"
               },
               "parameters": [
-                "\"http://localhost:2606/api/users/logout/=\" + GlobalVariableString(nickname)",
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
                 "\"\"",
-                "\"GET\"",
+                "\"DELETE\"",
                 "\"application/Json\"",
                 "jsonString",
                 ""
@@ -4709,18 +4817,7 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "NewText",
-                "=",
-                "GlobalVariableString(nickname)"
-              ]
-            }
-          ]
+          "actions": []
         }
       ],
       "layers": [
@@ -6020,6 +6117,123 @@
       ],
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "Fade",
+                "\"Fade\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -6309,7 +6523,10 @@
               "comment2": ""
             },
             {
+<<<<<<< Updated upstream
               "folded": true,
+=======
+>>>>>>> Stashed changes
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -6359,7 +6576,10 @@
               "comment2": ""
             },
             {
+<<<<<<< Updated upstream
               "folded": true,
+=======
+>>>>>>> Stashed changes
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -7142,6 +7362,106 @@
         }
       ],
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -12722,6 +13042,106 @@
                     }
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
               ]
             }
           ]
@@ -26592,6 +27012,85 @@
                 "\"Effect\"",
                 "no"
               ]
+            },
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
+              ]
             }
           ]
         },
@@ -38232,6 +38731,85 @@
                 "YesSureText",
                 "\"Effect\"",
                 "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/token/verification/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "jsonString",
+                "error"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "jsonString",
+                "=",
+                "\"\\\"Error\\\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                "\"\"",
+                "\"DELETE\"",
+                "\"application/Json\"",
+                "jsonString",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "nickname",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "password",
+                "=",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"LogIn\"",
+                ""
               ]
             }
           ]
