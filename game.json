@@ -1168,6 +1168,14 @@
         "name": "Grid",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "disablePreload": false,
+        "file": "bdOff.json",
+        "kind": "json",
+        "metadata": "",
+        "name": "bdOff.json",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1215,7 +1223,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.49288404153603016,
+        "zoomFactor": 0.44620618323161393,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4788,7 +4796,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.587721207209412,
+        "zoomFactor": 0.6280257880781167,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4818,15 +4826,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 766,
+          "height": 783,
           "layer": "",
           "locked": true,
           "name": "BackGround",
           "persistentUuid": "e40099df-4eb3-47ab-bd3e-7093f555fe45",
           "sealed": true,
-          "width": 1362,
-          "x": 2,
-          "y": 4,
+          "width": 1370,
+          "x": -6,
+          "y": -7,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6021,6 +6029,165 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "Start scene",
+          "comment2": ""
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "CurrentExpoText",
+                "=",
+                "\"Enemy kills:\""
+              ]
+            },
+            {
+              "type": {
+                "value": "JSONResourceLoader::LoadJSONToScene"
+              },
+              "parameters": [
+                "",
+                "bdOff.json",
+                "Leaderboards",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Go back to main menu",
           "comment2": ""
         },
@@ -6060,34 +6227,28 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Set de nombres",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Set de scores",
-          "comment2": ""
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
           "comment": "Botones",
           "comment2": ""
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"http://localhost:2606/api/users/getLeaderboard_E_K\"",
+                "\"\"",
+                "\"GET\"",
+                "\"application/Json\"",
+                "Leaderboard",
+                ""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6105,6 +6266,14 @@
           "actions": [
             {
               "type": {
+                "value": "VariableClearChildren"
+              },
+              "parameters": [
+                "Leaderboard"
+              ]
+            },
+            {
+              "type": {
                 "value": "TextObject::String"
               },
               "parameters": [
@@ -6115,20 +6284,32 @@
             },
             {
               "type": {
-                "value": "SendAsyncRequest"
+                "value": "JSONResourceLoader::LoadJSONToScene"
               },
               "parameters": [
-                "\"http://localhost:2606/api/users/getLeaderboard_E_K\"",
-                "\"\"",
-                "\"GET\"",
-                "\"application/Json\"",
-                "Leaderboard",
+                "",
+                "bdOff.json",
+                "Leaderboards",
                 ""
               ]
             }
           ],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -6145,13 +6326,12 @@
                     "var name5 = runtimeScene.getObjects(\"Top5Name\")",
                     "",
                     "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
-                    "console.log(lb.getChildAt(0).getChildAt(0).getAsString())",
                     "",
-                    "name1[0].setString(\"PETO\")",
-                    "name2[0].setString(\"PETO\")",
-                    "name3[0].setString(\"PETO\")",
-                    "name4[0].setString(\"PETO\")",
-                    "name5[0].setString(\"PETO\")",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
                     "",
                     "",
                     "",
@@ -6166,6 +6346,20 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -6181,12 +6375,14 @@
                     "var score4 = runtimeScene.getObjects(\"Top4Score\")",
                     "var score5 = runtimeScene.getObjects(\"Top5Score\")",
                     "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
                     "",
-                    "score1[0].setString(\"0\")",
-                    "score2[0].setString(\"0\")",
-                    "score3[0].setString(\"0\")",
-                    "score4[0].setString(\"0\")",
-                    "score5[0].setString(\"0\")",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
                     "",
                     "",
                     "",
@@ -6226,6 +6422,109 @@
                 "\"Tawas merged:\""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
           ]
         },
         {
@@ -6250,6 +6549,109 @@
                 "CurrentExpoText",
                 "=",
                 "\"Money spent:\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
               ]
             }
           ]
@@ -6278,6 +6680,109 @@
                 "\"Game time:\""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
           ]
         },
         {
@@ -6304,6 +6809,109 @@
                 "\"Tawas bought:\""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            }
           ]
         },
         {
@@ -6328,6 +6936,109 @@
                 "CurrentExpoText",
                 "=",
                 "\"High score:\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de nombres",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var name1 = runtimeScene.getObjects(\"Top1Name\")",
+                    "var name2 = runtimeScene.getObjects(\"Top2Name\")",
+                    "var name3 = runtimeScene.getObjects(\"Top3Name\")",
+                    "var name4 = runtimeScene.getObjects(\"Top4Name\")",
+                    "var name5 = runtimeScene.getObjects(\"Top5Name\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "name1[0].setString(lb.getChildAt(0).getChildAt(0).getAsString())",
+                    "name2[0].setString(lb.getChildAt(1).getChildAt(0).getAsString())",
+                    "name3[0].setString(lb.getChildAt(2).getChildAt(0).getAsString())",
+                    "name4[0].setString(lb.getChildAt(3).getChildAt(0).getAsString())",
+                    "name5[0].setString(lb.getChildAt(4).getChildAt(0).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Set de scores",
+              "comment2": ""
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "",
+                    "var score1 = runtimeScene.getObjects(\"Top1Score\")",
+                    "var score2 = runtimeScene.getObjects(\"Top2Score\")",
+                    "var score3 = runtimeScene.getObjects(\"Top3Score\")",
+                    "var score4 = runtimeScene.getObjects(\"Top4Score\")",
+                    "var score5 = runtimeScene.getObjects(\"Top5Score\")",
+                    "",
+                    "var lb = runtimeScene.getVariables().get(\"Leaderboards\")",
+                    "",
+                    "",
+                    "score1[0].setString(lb.getChildAt(0).getChildAt(1).getAsString())",
+                    "score2[0].setString(lb.getChildAt(1).getChildAt(1).getAsString())",
+                    "score3[0].setString(lb.getChildAt(2).getChildAt(1).getAsString())",
+                    "score4[0].setString(lb.getChildAt(3).getChildAt(1).getAsString())",
+                    "score5[0].setString(lb.getChildAt(4).getChildAt(1).getAsString())",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
               ]
             }
           ]
@@ -38538,6 +39249,167 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "General",
+      "extensionNamespace": "",
+      "fullName": "JSON Resource Loading",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWZpbGUtY29kZS1vdXRsaW5lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE0IDJINkM0Ljg5IDIgNCAyLjkgNCA0VjIwQzQgMjEuMTEgNC44OSAyMiA2IDIySDE4QzE5LjExIDIyIDIwIDIxLjExIDIwIDIwVjhMMTQgMk0xOCAyMEg2VjRIMTNWOUgxOFYyME05LjU0IDE1LjY1TDExLjYzIDE3Ljc0TDEwLjM1IDE5TDcgMTUuNjVMMTAuMzUgMTIuM0wxMS42MyAxMy41Nkw5LjU0IDE1LjY1TTE3IDE1LjY1TDEzLjY1IDE5TDEyLjM4IDE3Ljc0TDE0LjQ3IDE1LjY1TDEyLjM4IDEzLjU2TDEzLjY1IDEyLjNMMTcgMTUuNjVaIiAvPjwvc3ZnPg==",
+      "name": "JSONResourceLoader",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/file-code-outline.svg",
+      "shortDescription": "Loads a JSON resource into a variable.",
+      "version": "1.0.0",
+      "description": [
+        "Loads a (static) JSON resource from your project files into a global, scene, or object variable.",
+        "",
+        "NEVER use this to load your game.json into a variable - this would increase your game size by a lot and make your whole project file available for anyone to open!"
+      ],
+      "origin": {
+        "identifier": "JSONResourceLoader",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "json",
+        "resource",
+        "load",
+        "open",
+        "file",
+        "data",
+        "static",
+        "file"
+      ],
+      "authorIds": [
+        "ZgrsWuRTAkXgeuPV9bo0zuEcA2w1"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Loads a JSON resource into a scene structure variable.",
+          "fullName": "Load a JSON resource in a scene variable",
+          "functionType": "Action",
+          "name": "LoadJSONToScene",
+          "sentence": "Load _PARAM1_ into scene variable _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext",
+                "    .getArgument(\"Variable\")",
+                "    .fromJSObject(",
+                "        runtimeScene",
+                "            .getGame()",
+                "            .getJsonManager()",
+                "            .getLoadedJson(eventsFunctionContext.getArgument(\"Resource\"))",
+                "    );",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The resource to load the JSON from",
+              "name": "Resource",
+              "type": "jsonResource"
+            },
+            {
+              "description": "The scene variable to load the JSON to",
+              "name": "Variable",
+              "type": "scenevar"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Loads a JSON resource into a global structure variable.",
+          "fullName": "Load a JSON resource in a global variable",
+          "functionType": "Action",
+          "name": "LoadJSONToGlobal",
+          "sentence": "Load _PARAM1_ into global variable _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext",
+                "    .getArgument(\"Variable\")",
+                "    .fromJSObject(",
+                "        runtimeScene",
+                "            .getGame()",
+                "            .getJsonManager()",
+                "            .getLoadedJson(eventsFunctionContext.getArgument(\"Resource\"))",
+                "    );",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The resource to load the JSON from",
+              "name": "Resource",
+              "type": "jsonResource"
+            },
+            {
+              "description": "The global variable to load the JSON to",
+              "name": "Variable",
+              "type": "globalvar"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Loads a JSON resource into an object structure variable.",
+          "fullName": "Load a JSON resource in an object variable",
+          "functionType": "Action",
+          "name": "LoadJSONToObject",
+          "sentence": "Load _PARAM1_ into object variable _PARAM3_ of object _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext",
+                "    .getArgument(\"Variable\")",
+                "    .fromJSObject(",
+                "        runtimeScene",
+                "            .getGame()",
+                "            .getJsonManager()",
+                "            .getLoadedJson(eventsFunctionContext.getArgument(\"Resource\"))",
+                "    );",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The resource to load the JSON from",
+              "name": "Resource",
+              "type": "jsonResource"
+            },
+            {
+              "description": "The object where to find the variable",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "The object variable to load the JSON to",
+              "name": "Variable",
+              "type": "objectvar"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
+      "eventsBasedObjects": []
+    },
     {
       "author": "Entropy, @VictrisGames",
       "category": "Movement",
