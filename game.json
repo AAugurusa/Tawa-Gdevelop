@@ -1268,6 +1268,24 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Toggle Switch/0af9e04c0c382482aeeaa36bc713a626249d6f6df3280bbccc6a042973ad555c_Small Plastic Green Round Switch_On.png",
           "name": "Small Plastic Green Round Switch_On.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\22.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1304,6 +1322,12 @@
       "name": "error",
       "type": "structure",
       "children": []
+    },
+    {
+      "folded": true,
+      "name": "actual_level_token",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [
@@ -7575,7 +7599,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6443744675408327,
+        "zoomFactor": 0.603020683461034,
         "windowMask": false
       },
       "objectsGroups": [
@@ -9814,6 +9838,53 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 652,
+          "layer": "Code",
+          "locked": true,
+          "name": "SureBanner",
+          "persistentUuid": "f895d6e5-ecea-41ca-9ad1-50d8f8463c99",
+          "sealed": true,
+          "width": 548,
+          "x": 424,
+          "y": 74,
+          "zOrder": 48,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Code",
+          "name": "Continue2Button",
+          "persistentUuid": "ae6c52b0-4708-404f-9a4a-91cde1518093",
+          "width": 0,
+          "x": 598,
+          "y": 583,
+          "zOrder": 49,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 423,
+          "layer": "Code",
+          "name": "code_text",
+          "persistentUuid": "457cfaba-5514-422e-9b38-4d25a5d4fd46",
+          "width": 433,
+          "x": 479,
+          "y": 153,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -9952,6 +10023,75 @@
         {
           "assetStoreId": "d00645a899e762e085fa6fdf2625701baea9cc10ee903a64ca7d371e5bbb8dca",
           "name": "ContinueButton",
+          "tags": "",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "content": {
+            "LeftPadding": 0,
+            "RightPadding": 0,
+            "PressedLabelOffsetY": 2,
+            "BottomPadding": 4,
+            "TopPadding": 0,
+            "HoveredFadeOutDuration": 0
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Hovered.png",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Idle": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Idle.png222",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Continue",
+              "font": "Blaka-Regular.ttf",
+              "textAlignment": "center",
+              "characterSize": 35,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 10,
+              "height": 64,
+              "leftMargin": 6,
+              "rightMargin": 6,
+              "texture": "Floating Out Button Dark Blue_Pressed.png22",
+              "tiled": false,
+              "topMargin": 10,
+              "width": 192
+            }
+          }
+        },
+        {
+          "assetStoreId": "d00645a899e762e085fa6fdf2625701baea9cc10ee903a64ca7d371e5bbb8dca",
+          "name": "Continue2Button",
           "tags": "",
           "type": "PanelSpriteButton::PanelSpriteButton",
           "variables": [],
@@ -10191,6 +10331,69 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "code_text",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Level code: ",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 55,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "SureBanner",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\BannerProv.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -11854,185 +12057,25 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Path"
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "path_type_1",
-                "\"Glow\"",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "path_type_2",
-                "\"Glow\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "path_type_3",
-                "\"Glow\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "back_type_1",
-                "\"Glow\"",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "back_type_2",
-                "\"Glow\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "back_type_3",
-                "\"Glow\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "EnableEffect"
-              },
-              "parameters": [
-                "Tile",
-                "\"Adjustments\"",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "jsonString",
-                "=",
-                "\"\\\"Error\\\"\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SendAsyncRequest"
-              },
-              "parameters": [
-                "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
-                "\"\"",
-                "\"DELETE\"",
-                "\"application/Json\"",
-                "jsonString",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarGlobalTxt"
-              },
-              "parameters": [
-                "nickname",
-                "=",
-                "\"\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarGlobalTxt"
-              },
-              "parameters": [
-                "password",
-                "=",
-                "\"\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
+                "inverted": true,
+                "value": "LayerVisible"
               },
               "parameters": [
                 "",
-                "\"LogIn\"",
-                ""
+                "\"Code\""
               ]
             }
-          ]
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Edit path",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          ],
+          "actions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "path_type_1",
                     ""
                   ]
                 },
@@ -12046,12 +12089,10 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarScene"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "1"
+                    "Path"
                   ]
                 },
                 {
@@ -12081,6 +12122,1223 @@
                   "parameters": [
                     "path_type_3",
                     "\"Glow\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableEffect"
+                  },
+                  "parameters": [
+                    "back_type_1",
+                    "\"Glow\"",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableEffect"
+                  },
+                  "parameters": [
+                    "back_type_2",
+                    "\"Glow\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableEffect"
+                  },
+                  "parameters": [
+                    "back_type_3",
+                    "\"Glow\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EnableEffect"
+                  },
+                  "parameters": [
+                    "Tile",
+                    "\"Adjustments\"",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "jsonString",
+                    "=",
+                    "\"\\\"Error\\\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"http://localhost:2606/api/users/logout/\" + GlobalVariableString(nickname)",
+                    "\"\"",
+                    "\"DELETE\"",
+                    "\"application/Json\"",
+                    "jsonString",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "nickname",
+                    "=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobalTxt"
+                  },
+                  "parameters": [
+                    "password",
+                    "=",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"LogIn\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Edit path",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "path_type_1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_1",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_2",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_3",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "path_type_2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_1",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_2",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_3",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "path_type_3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_1",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_2",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "path_type_3",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": ""
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Tile",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "path_type1",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Tile"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Tile",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "path_type2",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Tile"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.path_type",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Tile",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "path_type3",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Tile"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Edit background",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "back_type_1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.back_type",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_1",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_2",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_3",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "gameBackground",
+                        "\"1\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "back_type_2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.back_type",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_1",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_2",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_3",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "gameBackground",
+                        "\"2\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "back_type_3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.back_type",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_1",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_2",
+                        "\"Glow\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EnableEffect"
+                      },
+                      "parameters": [
+                        "back_type_3",
+                        "\"Glow\"",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "gameBackground",
+                        "\"3\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Edit merge",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "merge_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "merge_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.merge_active",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Edit refund",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "refund_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.refund_active",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "RefundTool",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "refund_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.refund_active",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "RefundTool",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "0.5"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
+              "name": "Edit tawas",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "zeus_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.zeus_active",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "ZeusTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "zeus_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.zeus_active",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "ZeusTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "0.5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "ares_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "AresTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.arez_active",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "ares_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "AresTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.arez_active",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "poseidon_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "PoseidonTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.poseidon_active",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "poseidon_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "PoseidonTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.poseidon_active",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "atenea_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "AteneaTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.atenea_active",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
+                      },
+                      "parameters": [
+                        "atenea_active_button",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetEffectDoubleParameter"
+                      },
+                      "parameters": [
+                        "AteneaTowerBuyer",
+                        "\"Brightness\"",
+                        "\"brightness\"",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "levelStructure.atenea_active",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "BackButton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"MainMenu\"",
                     ""
                   ]
                 }
@@ -12091,58 +13349,23 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "TextInput::TextInputObject::Text"
                   },
                   "parameters": [
-                    "path_type_2",
-                    ""
+                    "level_name_input",
+                    "=",
+                    "\"\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarScene"
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
                   },
                   "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_1",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_2",
-                    "\"Glow\"",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_3",
-                    "\"Glow\"",
+                    "ContinueButton",
+                    "",
                     ""
                   ]
                 }
@@ -12153,59 +13376,24 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "TextInput::TextInputObject::Text"
                   },
                   "parameters": [
-                    "path_type_3",
-                    ""
+                    "level_name_input",
+                    "!=",
+                    "\"\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarScene"
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
                   },
                   "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_1",
-                    "\"Glow\"",
+                    "ContinueButton",
+                    "yes",
                     ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_2",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "path_type_3",
-                    "\"Glow\"",
-                    "yes"
                   ]
                 }
               ]
@@ -12213,269 +13401,14 @@
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
+                "b": 27,
+                "g": 2,
+                "r": 208,
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
               },
-              "comment": ""
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Tile",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type1",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Tile"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Tile",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type2",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Tile"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Tile",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type3",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Tile"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Edit background",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-                  },
-                  "parameters": [
-                    "back_type_1",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.back_type",
-                    "=",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_1",
-                    "\"Glow\"",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_2",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_3",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "gameBackground",
-                    "\"1\""
-                  ]
-                }
-              ]
+              "comment": "HACER CONTINUE"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -12485,597 +13418,52 @@
                     "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
                   },
                   "parameters": [
-                    "back_type_2",
+                    "ContinueButton",
                     ""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarScene"
+                    "value": "ModVarSceneTxt"
                   },
                   "parameters": [
-                    "levelStructure.back_type",
+                    "levelStructure.map_name",
                     "=",
-                    "2"
+                    "level_name_input.Text()"
                   ]
                 },
                 {
                   "type": {
-                    "value": "EnableEffect"
+                    "value": "DebuggerTools::ConsoleLog"
                   },
                   "parameters": [
-                    "back_type_1",
-                    "\"Glow\"",
+                    "VariableString(levelStructure.map_name)",
+                    "",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "EnableEffect"
+                    "value": "ShowLayer"
                   },
                   "parameters": [
-                    "back_type_2",
-                    "\"Glow\"",
-                    "yes"
+                    "",
+                    "\"Code\""
                   ]
                 },
                 {
                   "type": {
-                    "value": "EnableEffect"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "back_type_3",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "gameBackground",
-                    "\"2\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-                  },
-                  "parameters": [
-                    "back_type_3",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.back_type",
-                    "=",
-                    "3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_1",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_2",
-                    "\"Glow\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "EnableEffect"
-                  },
-                  "parameters": [
-                    "back_type_3",
-                    "\"Glow\"",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "gameBackground",
-                    "\"3\""
+                    "level_name_input"
                   ]
                 }
               ]
             }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Edit merge",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "merge_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.merge_active",
-                    "True"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "merge_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.merge_active",
-                    "False"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Edit refund",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "refund_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.refund_active",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "RefundTool",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "refund_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.refund_active",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "RefundTool",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "0.5"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Edit tawas",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "zeus_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.zeus_active",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "ZeusTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "zeus_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.zeus_active",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "ZeusTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "0.5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "ares_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.arez_active",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "AresTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "ares_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.arez_active",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "AresTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "0.5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "poseidon_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.poseidon_active",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "PoseidonTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "poseidon_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.poseidon_active",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "PoseidonTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "0.5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "atenea_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.atenea_active",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "AteneaTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::IsChecked"
-                  },
-                  "parameters": [
-                    "atenea_active_button",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "levelStructure.atenea_active",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetEffectDoubleParameter"
-                  },
-                  "parameters": [
-                    "AteneaTowerBuyer",
-                    "\"Brightness\"",
-                    "\"brightness\"",
-                    "0.5"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13085,99 +13473,7 @@
                 "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
               },
               "parameters": [
-                "BackButton",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"MainMenu\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "TextInput::TextInputObject::Text"
-              },
-              "parameters": [
-                "level_name_input",
-                "=",
-                "\"\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
-              },
-              "parameters": [
-                "ContinueButton",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "TextInput::TextInputObject::Text"
-              },
-              "parameters": [
-                "level_name_input",
-                "!=",
-                "\"\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
-              },
-              "parameters": [
-                "ContinueButton",
-                "yes",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 27,
-            "g": 2,
-            "r": 208,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "HACER CONTINUE"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "ContinueButton",
+                "Continue2Button",
                 ""
               ]
             }
@@ -13188,7 +13484,7 @@
                 "value": "DebuggerTools::ConsoleLog"
               },
               "parameters": [
-                "\"LISTOU\"",
+                "\"LISTO\"",
                 "",
                 ""
               ]
@@ -13222,6 +13518,22 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 21263688,
+          "ambientLightColorG": 24,
+          "ambientLightColorR": 6071872,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Code",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
           "effects": []
         }
       ],
@@ -13518,14 +13830,14 @@
             {
               "folded": true,
               "name": "arez_active",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             },
             {
               "folded": true,
               "name": "atenea_active",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             },
             {
               "folded": true,
@@ -13534,10 +13846,15 @@
               "value": 1
             },
             {
+              "name": "map_name",
+              "type": "string",
+              "value": ""
+            },
+            {
               "folded": true,
               "name": "merge_active",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             },
             {
               "folded": true,
@@ -13548,20 +13865,20 @@
             {
               "folded": true,
               "name": "poseidon_active",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             },
             {
               "folded": true,
               "name": "refund_active",
-              "type": "boolean",
-              "value": false
+              "type": "number",
+              "value": 0
             },
             {
               "folded": true,
               "name": "zeus_active",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             }
           ]
         }
@@ -15965,7 +16282,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -15976,6 +16293,64 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "NewSprite15",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\22.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -18532,6 +18907,16 @@
               "parameters": [
                 "path_type3"
               ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Background",
+                "=",
+                "Variable(levelStructure.back_type)-1"
+              ]
             }
           ],
           "events": [
@@ -18855,6 +19240,23 @@
               ]
             }
           ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Map editor",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": []
         },
         {
           "colorB": 0,
