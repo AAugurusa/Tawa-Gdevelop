@@ -7778,7 +7778,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6233547399525515,
+        "zoomFactor": 0.5833499312277498,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7857,6 +7857,12 @@
           "name": "jsonString1",
           "type": "string",
           "value": ""
+        },
+        {
+          "folded": true,
+          "name": "momentaryVar",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -7969,14 +7975,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "TestBUTT",
+          "customSize": true,
+          "height": 349,
+          "layer": "Level",
+          "name": "LevelByCode",
           "persistentUuid": "404a37f0-bef3-4489-b02e-4348d9654ad9",
-          "width": 0,
-          "x": 546,
-          "y": 546,
+          "width": 718,
+          "x": 325,
+          "y": 291,
           "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
@@ -8187,7 +8193,7 @@
         },
         {
           "assetStoreId": "d00645a899e762e085fa6fdf2625701baea9cc10ee903a64ca7d371e5bbb8dca",
-          "name": "TestBUTT",
+          "name": "LevelByCode",
           "tags": "",
           "type": "PanelSpriteButton::PanelSpriteButton",
           "variables": [],
@@ -8232,7 +8238,7 @@
               "italic": false,
               "smoothed": true,
               "underlined": false,
-              "string": "Search",
+              "string": "",
               "font": "Blaka-Regular.ttf",
               "textAlignment": "center",
               "characterSize": 35,
@@ -10518,12 +10524,84 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarGlobalTxt"
+                        "value": "SendAsyncRequest"
                       },
                       "parameters": [
-                        "actual_level_token",
-                        "=",
-                        "level_code_input.Text()"
+                        "",
+                        "",
+                        "",
+                        "",
+                        "momentaryVar",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "momentaryVar",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarGlobalTxt"
+                          },
+                          "parameters": [
+                            "actual_level_token",
+                            "=",
+                            "level_code_input.Text()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "momentaryVar",
+                            "False"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "ErrorText",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "ErrorText"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -10541,7 +10619,7 @@
                 "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
               },
               "parameters": [
-                "TestBUTT",
+                "LevelByCode",
                 ""
               ]
             }
@@ -10586,6 +10664,22 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Level",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
           "effects": []
         }
       ],
