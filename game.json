@@ -7778,7 +7778,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5833499312277498,
+        "zoomFactor": 0.6443744675408333,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7984,6 +7984,21 @@
           "x": 325,
           "y": 291,
           "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 342,
+          "layer": "Level",
+          "name": "LevelText",
+          "persistentUuid": "c6d54d26-fe79-43bd-97f9-d68c366784a4",
+          "width": 713,
+          "x": 327,
+          "y": 294,
+          "zOrder": 51,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10277,6 +10292,28 @@
             "readOnly": false,
             "disabled": false
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "LevelText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Static",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -10318,6 +10355,16 @@
               },
               "parameters": [
                 "ErrorText"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarGlobalTxt"
+              },
+              "parameters": [
+                "actual_level_token",
+                "=",
+                "\"\""
               ]
             }
           ]
@@ -10462,7 +10509,17 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Level\""
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -10479,6 +10536,16 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobalTxt"
+                      },
+                      "parameters": [
+                        "actual_level_token",
+                        "=",
+                        "\"\""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Montre"
@@ -10527,12 +10594,20 @@
                         "value": "SendAsyncRequest"
                       },
                       "parameters": [
-                        "",
-                        "",
-                        "",
+                        "\"http://localhost:2606/api/maps/existsMap/\"+ level_code_input.Text()",
+                        "\"\"",
+                        "\"GET\"",
                         "",
                         "momentaryVar",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
                       ]
                     }
                   ],
@@ -10560,6 +10635,46 @@
                             "=",
                             "level_code_input.Text()"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SendAsyncRequest"
+                          },
+                          "parameters": [
+                            "\"http://localhost:2606/api/maps/getMapNameById/\"+ level_code_input.Text()",
+                            "\"\"",
+                            "\"GET\"",
+                            "",
+                            "auxiliarText",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "LevelText",
+                            "=",
+                            "VariableString(auxiliarText)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ShowLayer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Level\""
+                          ]
                         }
                       ]
                     },
@@ -10577,6 +10692,26 @@
                         }
                       ],
                       "actions": [
+                        {
+                          "type": {
+                            "value": "TextInput::TextInputObject::SetText"
+                          },
+                          "parameters": [
+                            "level_code_input",
+                            "=",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarGlobalTxt"
+                          },
+                          "parameters": [
+                            "actual_level_token",
+                            "=",
+                            "\"\""
+                          ]
+                        },
                         {
                           "type": {
                             "value": "Montre"
@@ -17378,49 +17513,49 @@
               "folded": true,
               "name": "arez_active",
               "type": "number",
-              "value": 1
+              "value": 4
             },
             {
               "folded": true,
               "name": "atenea_active",
               "type": "number",
-              "value": 1
+              "value": 4
             },
             {
               "folded": true,
               "name": "back_type",
               "type": "number",
-              "value": 1
+              "value": 4
             },
             {
               "folded": true,
               "name": "merge_active",
               "type": "number",
-              "value": 0
+              "value": 4
             },
             {
               "folded": true,
               "name": "path_type",
               "type": "number",
-              "value": 1
+              "value": 4
             },
             {
               "folded": true,
               "name": "poseidon_active",
               "type": "number",
-              "value": 1
+              "value": 4
             },
             {
               "folded": true,
               "name": "refund_active",
               "type": "number",
-              "value": 0
+              "value": 4
             },
             {
               "folded": true,
               "name": "zeus_active",
               "type": "number",
-              "value": 1
+              "value": 4
             }
           ]
         }
@@ -22465,11 +22600,270 @@
             },
             {
               "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "0.2"
+              ]
+            },
+            {
+              "type": {
                 "value": "JSONToVariableStructure"
               },
               "parameters": [
                 "VariableString(aux)",
                 "levelStructure"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "299",
+                    "330",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "338",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Background",
+                    "=",
+                    "Variable(levelStructure.back_type)-1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type1",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "306",
+                    "250",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "156",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Background",
+                    "=",
+                    "Variable(levelStructure.back_type)-1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type2",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "levelStructure.path_type",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySpawner",
+                    "300",
+                    "420",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "EndReachObject",
+                    "1297",
+                    "524",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Background",
+                    "=",
+                    "Variable(levelStructure.back_type)-1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Tile",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "path_type3",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tile",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -22582,257 +22976,7 @@
           "name": "Map editor",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EnemySpawner",
-                    "299",
-                    "330",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EndReachObject",
-                    "1297",
-                    "338",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Background",
-                    "=",
-                    "Variable(levelStructure.back_type)-1"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type1",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Tile",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EnemySpawner",
-                    "300",
-                    "420",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EndReachObject",
-                    "1297",
-                    "524",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Background",
-                    "=",
-                    "Variable(levelStructure.back_type)-1"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type3",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Tile",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "levelStructure.path_type",
-                    "=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EnemySpawner",
-                    "306",
-                    "250",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "EndReachObject",
-                    "1297",
-                    "156",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Background",
-                    "=",
-                    "Variable(levelStructure.back_type)-1"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Tile",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "path_type2",
-                        "",
-                        "",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Tile",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
+          "events": [],
           "parameters": []
         },
         {
