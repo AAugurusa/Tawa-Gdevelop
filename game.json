@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "LogIn",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -1464,6 +1464,42 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\Enemy\\Knight\\Tawa_Enemy4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/StarEmpty.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\StarEmpty.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/StarFull.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\StarFull.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/opcion-de-marcha.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\opcion-de-marcha.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/silueta-de-estrella-negra.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\silueta-de-estrella-negra.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -32327,7 +32363,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4768059862939712,
+        "zoomFactor": 0.6867131008486408,
         "windowMask": false
       },
       "objectsGroups": [
@@ -32372,6 +32408,34 @@
               "name": "ateneaBullet"
             }
           ]
+        },
+        {
+          "name": "Stars",
+          "objects": [
+            {
+              "name": "Star1"
+            },
+            {
+              "name": "Star2"
+            },
+            {
+              "name": "Star3"
+            }
+          ]
+        },
+        {
+          "name": "Misions",
+          "objects": [
+            {
+              "name": "TextMision1"
+            },
+            {
+              "name": "TextMision2"
+            },
+            {
+              "name": "TextMision3"
+            }
+          ]
         }
       ],
       "variables": [
@@ -32385,9 +32449,10 @@
           "folded": true,
           "name": "Num_Coins",
           "type": "number",
-          "value": 100
+          "value": 400
         },
         {
+          "folded": true,
           "name": "towers_merged",
           "type": "structure",
           "children": [
@@ -32399,6 +32464,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "towers_buyed",
           "type": "structure",
           "children": [
@@ -32410,6 +32476,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "enemyKilled",
           "type": "structure",
           "children": [
@@ -32421,6 +32488,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "currencySpent",
           "type": "structure",
           "children": [
@@ -32432,6 +32500,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "highRound",
           "type": "structure",
           "children": [
@@ -32443,6 +32512,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "gameTime",
           "type": "structure",
           "children": [
@@ -32468,6 +32538,12 @@
         {
           "folded": true,
           "name": "PauseMenuEnabled",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "MisionsMenuEnabled",
           "type": "boolean",
           "value": false
         },
@@ -32567,6 +32643,101 @@
           "name": "jsonString",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "MisionesEz",
+          "type": "array",
+          "children": [
+            {
+              "type": "string",
+              "value": "Kill 20 enemys"
+            },
+            {
+              "type": "string",
+              "value": "Spend 1000 coins"
+            },
+            {
+              "type": "string",
+              "value": "Get to round 5"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Buy 10 Tawas"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Merge 2 Tawas"
+            }
+          ]
+        },
+        {
+          "name": "MisionesMed",
+          "type": "array",
+          "children": [
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Kill 40 enemys"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Spend 2000 coins"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Get to round 15"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Buy 15 Tawas"
+            },
+            {
+              "type": "string",
+              "value": "Merge 5 Tawas"
+            }
+          ]
+        },
+        {
+          "name": "MisionesHard",
+          "type": "array",
+          "children": [
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Kill 80 enemys"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Spend 3000 coins"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Get to round 20"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Buy 20 Tawas"
+            },
+            {
+              "folded": true,
+              "type": "string",
+              "value": "Merge 10 Tawas"
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "numMisionCompleted",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -32703,21 +32874,6 @@
           "x": 12,
           "y": 21,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 45,
-          "layer": "",
-          "name": "OptionsText",
-          "persistentUuid": "4b6fee88-bf20-43af-94fc-43b9f3029ebf",
-          "width": 236,
-          "x": 0,
-          "y": 715,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -34002,7 +34158,7 @@
           "persistentUuid": "0dd37913-3137-4755-b30f-64485273fb89",
           "width": 0,
           "x": 120,
-          "y": 555,
+          "y": 547,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -34032,7 +34188,7 @@
           "persistentUuid": "0ca90f27-b34d-4e9a-a7a4-a5aaa6809da5",
           "width": 0,
           "x": 120,
-          "y": 465,
+          "y": 457,
           "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
@@ -34047,7 +34203,7 @@
           "persistentUuid": "026b8a7a-eece-4cbf-8dc0-70c57c0e3322",
           "width": 0,
           "x": 120,
-          "y": 645,
+          "y": 637,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -34062,7 +34218,7 @@
           "persistentUuid": "6518a601-7bfd-4f47-ad35-8feeb94db610",
           "width": 64,
           "x": 120,
-          "y": 285,
+          "y": 277,
           "zOrder": 25,
           "numberProperties": [
             {
@@ -34082,7 +34238,7 @@
           "persistentUuid": "38489913-7e49-4673-aef3-352e13aae0d5",
           "width": 0,
           "x": 120,
-          "y": 375,
+          "y": 367,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -34114,6 +34270,141 @@
           "x": 2,
           "y": 180,
           "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 635,
+          "layer": "Misions",
+          "name": "PauseBanner",
+          "persistentUuid": "a7877135-1d0c-4603-9c9f-10eccd8a9d26",
+          "width": 534,
+          "x": 512,
+          "y": 67,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 148,
+          "layer": "Misions",
+          "name": "Star1",
+          "persistentUuid": "e4d2f870-fb57-4526-a542-aa3f35660b1a",
+          "width": 130,
+          "x": 579,
+          "y": 140,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 148,
+          "layer": "Misions",
+          "name": "Star2",
+          "persistentUuid": "fe85be15-d701-4d8c-bb60-e2815e8c65ab",
+          "width": 130,
+          "x": 712,
+          "y": 140,
+          "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 148,
+          "layer": "Misions",
+          "name": "Star3",
+          "persistentUuid": "8d67d245-7224-4176-a545-21215c71a548",
+          "width": 130,
+          "x": 844,
+          "y": 140,
+          "zOrder": 32,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 74,
+          "layer": "",
+          "name": "OptionsLogo",
+          "persistentUuid": "b606edb0-23cb-4560-8c87-581d6aa0ee90",
+          "width": 74,
+          "x": 22,
+          "y": 690,
+          "zOrder": 33,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 74,
+          "layer": "",
+          "name": "MisionsLogo",
+          "persistentUuid": "859015d4-6011-40d4-b786-d84a58addd49",
+          "width": 74,
+          "x": 140,
+          "y": 690,
+          "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 78,
+          "layer": "Misions",
+          "name": "TextMision1",
+          "persistentUuid": "273672d4-cdb2-4220-9369-0e3b0fdb8ef6",
+          "width": 393,
+          "x": 577,
+          "y": 320,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 78,
+          "layer": "Misions",
+          "name": "TextMision2",
+          "persistentUuid": "a16e363a-f724-41f3-9b2e-470374fb22f0",
+          "width": 393,
+          "x": 577,
+          "y": 420,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 78,
+          "layer": "Misions",
+          "name": "TextMision3",
+          "persistentUuid": "a66ef5e5-7565-42c3-bad3-cc0c998f8e4d",
+          "width": 393,
+          "x": 580,
+          "y": 520,
+          "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -37085,6 +37376,414 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "StarStatic",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "AnimationBehavior",
+              "type": "AnimationSystem::AnimationBehavior"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Complete",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarFull.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 69,
+                        "y": 79.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Star1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Empty",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarEmpty.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Complete",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarFull.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Star2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Empty",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarEmpty.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Complete",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarFull.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Star3",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Empty",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarEmpty.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Complete",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\StarFull.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "OptionsLogo",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\opcion-de-marcha.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "MisionsLogo",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\silueta-de-estrella-negra.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "TextMision1",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "1) BLA BLA",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 45,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "TextMision2",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "2) BLE BLE BLE",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 45,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "TextMision3",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "3) BLU BLU BLU BLU",
+          "font": "Blaka-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 45,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -37225,7 +37924,7 @@
                     "value": "SourisSurObjet"
                   },
                   "parameters": [
-                    "OptionsText",
+                    "OptionsLogo",
                     "",
                     "",
                     ""
@@ -37272,6 +37971,15 @@
                 },
                 {
                   "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MisionsMenuEnabled",
+                    "\"OptionsLayer\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": []
@@ -37313,6 +38021,15 @@
                       },
                       "parameters": [
                         "SureMenuEnabled",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "MisionsMenuEnabled",
                         "True"
                       ]
                     }
@@ -38089,6 +38806,121 @@
                         "no"
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0,
+                "textB": 255,
+                "textG": 255,
+                "textR": 255
+              },
+              "comment": "Misions manager"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "MisionsLogo",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ToggleSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MisionsMenuEnabled"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MisionsMenuEnabled",
+                    "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Misions\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MisionsMenuEnabled",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Misions\""
                   ]
                 }
               ]
@@ -42851,6 +43683,7 @@
                   "comment": "Normal Zeus"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -44008,6 +44841,7 @@
           "colorG": 255,
           "colorR": 255,
           "creationTime": 0,
+          "folded": true,
           "name": "Tower shooter",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -46291,6 +47125,1516 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 114,
+          "colorG": 103,
+          "colorR": 81,
+          "creationTime": 0,
+          "name": "Mision manager",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Creacion de misiones"
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "runtimeScene.setBackgroundColor(100,100,240);",
+                    "var misionsEz = runtimeScene.getVariables().get(\"MisionesEz\");",
+                    "var misionsMed = runtimeScene.getVariables().get(\"MisionesMed\");",
+                    "var misionsHard = runtimeScene.getVariables().get(\"MisionesHard\");",
+                    "",
+                    "var misionsText1 = runtimeScene.getObjects(\"TextMision1\");",
+                    "var misionsText2 = runtimeScene.getObjects(\"TextMision2\");",
+                    "var misionsText3 = runtimeScene.getObjects(\"TextMision3\");",
+                    "",
+                    "",
+                    "function randomNumber(min, max) { ",
+                    "    return Math.random() * (max - min) + min;",
+                    "};",
+                    "",
+                    "var ezNum = randomNumber(1, misionsEz._childrenArray.length);",
+                    "var medNum = randomNumber(1, misionsMed._childrenArray.length);",
+                    "var hardNum = randomNumber(1, misionsHard._childrenArray.length);",
+                    "",
+                    "misionsText1[0].setString(misionsEz.getChildAt(Math.trunc(ezNum))._str)",
+                    "misionsText2[0].setString(misionsMed.getChildAt(Math.trunc(medNum))._str)",
+                    "misionsText3[0].setString(misionsHard.getChildAt(Math.trunc(hardNum))._str)",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimationSystem::AnimationBehavior::AnimationSystem"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "AnimationBehavior",
+                    "\"Breath\"",
+                    "0.04",
+                    "StarStatic.Width()",
+                    "StarStatic.Height()",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Misiones Ez"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "enemyKilled.enemy_kills",
+                    ">=",
+                    "20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision1",
+                    "=",
+                    "\"Kill 20 enemys\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "currencySpent.cur_spent",
+                    ">=",
+                    "1000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision1",
+                    "=",
+                    "\"Spend 1000 coins\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    ">=",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision1",
+                    "=",
+                    "\"Get to round 5\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_buyed.t_buy",
+                    ">=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision1",
+                    "=",
+                    "\"Buy 10 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_merged.t_merge",
+                    ">=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision1",
+                    "=",
+                    "\"Merge 2 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Misiones Med"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_merged.t_merge",
+                    ">=",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision2",
+                    "=",
+                    "\"Merge 5 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_buyed.t_buy",
+                    ">=",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision2",
+                    "=",
+                    "\"Buy 15 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    ">=",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision2",
+                    "=",
+                    "\"Get to round 15\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "currencySpent.cur_spent",
+                    ">=",
+                    "2000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision2",
+                    "=",
+                    "\"Spend 2000 coins\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "enemyKilled.enemy_kills",
+                    ">=",
+                    "40"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision2",
+                    "=",
+                    "\"Kill 40 enemys\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Misiones HARD"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_merged.t_merge",
+                    ">=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision3",
+                    "=",
+                    "\"Merge 10 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "towers_buyed.t_buy",
+                    ">=",
+                    "30"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision3",
+                    "=",
+                    "\"Buy 30 Tawas\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "actualRound",
+                    ">=",
+                    "20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision3",
+                    "=",
+                    "\"Get to round 20\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "currencySpent.cur_spent",
+                    ">=",
+                    "3000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision3",
+                    "=",
+                    "\"Spend 3000 coins\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "enemyKilled.enemy_kills",
+                    ">=",
+                    "80"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "TextMision3",
+                    "=",
+                    "\"Kill 80 enemys\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StarStatic",
+                    "800",
+                    "389",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "StarStatic",
+                    "Tween",
+                    "\"OpacityStar\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 28,
+          "colorG": 231,
+          "colorR": 248,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Star manager",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Stars",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star1",
+                    "\"Complete\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star2",
+                    "\"Empty\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star3",
+                    "\"Empty\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star1",
+                    "\"Complete\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star2",
+                    "\"Complete\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Star3",
+                    "\"Empty\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "numMisionCompleted",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Stars",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -46352,9 +48696,29 @@
           "visibility": false,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Misions",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "AnimationBehavior",
+          "type": "AnimationSystem::AnimationBehavior"
+        },
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet"
