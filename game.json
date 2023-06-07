@@ -49661,6 +49661,7 @@
           "colorG": 200,
           "colorR": 174,
           "creationTime": 0,
+          "folded": true,
           "name": "Finishers",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -50283,7 +50284,6 @@
           "colorG": 103,
           "colorR": 81,
           "creationTime": 0,
-          "folded": true,
           "name": "Mision manager",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -51301,7 +51301,7 @@
                   "parameters": [
                     "towers_buyed.t_buy",
                     ">=",
-                    "30"
+                    "20"
                   ]
                 },
                 {
@@ -51311,7 +51311,7 @@
                   "parameters": [
                     "TextMision3",
                     "=",
-                    "\"Buy 30 Tawas\""
+                    "\"Buy 20 Tawas\""
                   ]
                 },
                 {
@@ -51878,7 +51878,7 @@
           "isLocked": false,
           "name": "EndLayer",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
