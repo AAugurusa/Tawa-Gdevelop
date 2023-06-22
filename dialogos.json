@@ -1,0 +1,82 @@
+[
+	{
+		"title": "Welcome",
+		"tags": "",
+		"body": "Welcome player, this is Tawa, a tower defense-style game where you have to place towers to defend yourself from enemy attacks.<<finish>>",
+		"position": {
+			"x": -281,
+			"y": -141
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Stars",
+		"tags": "",
+		"body": "To see your level missions, click the star icon at the bottom left of the screen.<<finish>>",
+		"position": {
+			"x": -30,
+			"y": -141
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Options",
+		"tags": "",
+		"body": "To open the options menu, click on the gear button located at the bottom left side of the screen.<<finish>>",
+		"position": {
+			"x": 202,
+			"y": -139
+		},
+		"colorID": 8
+	},
+	{
+		"title": "TawasIntro",
+		"tags": "",
+		"body": "These are your towers, also known as \"tawas\". They are your only line of defense against your enemies, and each one has special properties.<<finish>>",
+		"position": {
+			"x": -285,
+			"y": 91
+		},
+		"colorID": 8
+	},
+	{
+		"title": "TawasPut",
+		"tags": "",
+		"body": "To construct a tower, you need to click on the icon of the desired tower and then click on an empty tile on the screen.<<finish>>",
+		"position": {
+			"x": -37,
+			"y": 89
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Enemy",
+		"tags": "",
+		"body": "Look out here comes a Enemy!<<finish>>",
+		"position": {
+			"x": 194,
+			"y": 89
+		},
+		"colorID": 8
+	},
+	{
+		"title": "End",
+		"tags": "",
+		"body": "Congratulations! You have completed the tutorial, good luck on the rest of the levels<<finish>>",
+		"position": {
+			"x": -280,
+			"y": 312
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Merge",
+		"tags": "",
+		"body": "To upgrade a tawa you have to insert a new one and merge it.<<finish>>",
+		"position": {
+			"x": -36,
+			"y": 315
+		},
+		"colorID": 8
+	}
+]
